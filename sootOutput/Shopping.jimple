@@ -1,0 +1,286 @@
+class Shopping extends java.lang.Object
+{
+
+    void <init>()
+    {
+        Shopping r0;
+
+        r0 := @this: Shopping;
+
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public static void main(java.lang.String[])
+    {
+        java.lang.String[] r0;
+        Shop r2, $r4, $r5, $r20, $r24, $r25, $r50, $r51, $r52;
+        long l0, l1, l2, $l4, l6, l7, l8, l9, l10, l11, l12, l13, l14, l15, l16;
+        byte $b3;
+        Nil $r6;
+        Bag $r7, $r21, $r22, $r47;
+        java.lang.StringBuilder $r8, $r10, $r11, $r14, $r16, $r17;
+        java.io.PrintStream $r9, $r15, $r19;
+        java.lang.String $r12, $r18;
+        SumVisitor $r13;
+        Food $r23, $r27, $r28;
+        Fruit $r26, $r30, $r31;
+        Vegetable $r29, $r33, $r34;
+        Apparel $r32, $r36, $r37;
+        Shirt $r35, $r39, $r40;
+        Pant $r38, $r42, $r43;
+        Accessor $r41, $r45, $r46;
+        Hat $r44, $r48, $r49;
+        Item r54, r55, r56, r57, r58, r59, r60, r61, r62, r63;
+        boolean z0;
+
+        r0 := @parameter0: java.lang.String[];
+
+        $r4 = new Shop;
+
+        specialinvoke $r4.<Shop: void <init>()>();
+
+        $r5 = new Shop;
+
+        specialinvoke $r5.<Shop: void <init>()>();
+
+        r54 = (Shop) $r4;
+
+        l6 = 0L + 6L;
+
+        z0 = 0;
+
+        l7 = 2L;
+
+     label1:
+        $b3 = l7 cmp 1900000L;
+
+        if $b3 > 0 goto label4;
+
+        if z0 != 0 goto label2;
+
+        $r51 = (Shop) r54;
+
+        $r50 = new Shop;
+
+        specialinvoke $r50.<Shop: void <init>()>();
+
+        $r51.<Shop: Item next> = $r50;
+
+        l8 = l6 + 6L;
+
+        $r52 = (Shop) r54;
+
+        r55 = $r52.<Shop: Item next>;
+
+        goto label3;
+
+     label2:
+        $r21 = (Bag) r54;
+
+        $r20 = new Shop;
+
+        specialinvoke $r20.<Shop: void <init>()>();
+
+        $r21.<Bag: Item next> = $r20;
+
+        l8 = l6 + 6L;
+
+        $r22 = (Bag) r54;
+
+        r55 = $r22.<Bag: Item next>;
+
+     label3:
+        $r24 = (Shop) r55;
+
+        $r23 = new Food;
+
+        specialinvoke $r23.<Food: void <init>()>();
+
+        $r24.<Shop: Item next> = $r23;
+
+        l9 = l8 + 2L;
+
+        $r25 = (Shop) r55;
+
+        r56 = $r25.<Shop: Item next>;
+
+        $r27 = (Food) r56;
+
+        $r26 = new Fruit;
+
+        specialinvoke $r26.<Fruit: void <init>()>();
+
+        $r27.<Food: Item next> = $r26;
+
+        l10 = l9 + 1L;
+
+        $r28 = (Food) r56;
+
+        r57 = $r28.<Food: Item next>;
+
+        $r30 = (Fruit) r57;
+
+        $r29 = new Vegetable;
+
+        specialinvoke $r29.<Vegetable: void <init>()>();
+
+        $r30.<Fruit: Item next> = $r29;
+
+        l11 = l10 + 1L;
+
+        $r31 = (Fruit) r57;
+
+        r58 = $r31.<Fruit: Item next>;
+
+        $r33 = (Vegetable) r58;
+
+        $r32 = new Apparel;
+
+        specialinvoke $r32.<Apparel: void <init>()>();
+
+        $r33.<Vegetable: Item next> = $r32;
+
+        l12 = l11 + 2L;
+
+        $r34 = (Vegetable) r58;
+
+        r59 = $r34.<Vegetable: Item next>;
+
+        $r36 = (Apparel) r59;
+
+        $r35 = new Shirt;
+
+        specialinvoke $r35.<Shirt: void <init>()>();
+
+        $r36.<Apparel: Item next> = $r35;
+
+        l13 = l12 + 1L;
+
+        $r37 = (Apparel) r59;
+
+        r60 = $r37.<Apparel: Item next>;
+
+        $r39 = (Shirt) r60;
+
+        $r38 = new Pant;
+
+        specialinvoke $r38.<Pant: void <init>()>();
+
+        $r39.<Shirt: Item next> = $r38;
+
+        l14 = l13 + 1L;
+
+        $r40 = (Shirt) r60;
+
+        r61 = $r40.<Shirt: Item next>;
+
+        $r42 = (Pant) r61;
+
+        $r41 = new Accessor;
+
+        specialinvoke $r41.<Accessor: void <init>()>();
+
+        $r42.<Pant: Item next> = $r41;
+
+        l15 = l14 + 2L;
+
+        $r43 = (Pant) r61;
+
+        r62 = $r43.<Pant: Item next>;
+
+        $r45 = (Accessor) r62;
+
+        $r44 = new Hat;
+
+        specialinvoke $r44.<Hat: void <init>()>();
+
+        $r45.<Accessor: Item next> = $r44;
+
+        l16 = l15 + 1L;
+
+        $r46 = (Accessor) r62;
+
+        r63 = $r46.<Accessor: Item next>;
+
+        $r48 = (Hat) r63;
+
+        $r47 = new Bag;
+
+        specialinvoke $r47.<Bag: void <init>()>();
+
+        $r48.<Hat: Item next> = $r47;
+
+        l6 = l16 + 1L;
+
+        $r49 = (Hat) r63;
+
+        r54 = $r49.<Hat: Item next>;
+
+        z0 = 1;
+
+        l7 = l7 + 1L;
+
+        goto label1;
+
+     label4:
+        $r7 = (Bag) r54;
+
+        $r6 = new Nil;
+
+        specialinvoke $r6.<Nil: void <init>()>();
+
+        $r7.<Bag: Item next> = $r6;
+
+        r2 = (Shop) $r4;
+
+        $r9 = <java.lang.System: java.io.PrintStream out>;
+
+        $r8 = new java.lang.StringBuilder;
+
+        specialinvoke $r8.<java.lang.StringBuilder: void <init>()>();
+
+        $r10 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Expected: ");
+
+        $r11 = virtualinvoke $r10.<java.lang.StringBuilder: java.lang.StringBuilder append(long)>(l6);
+
+        $r12 = virtualinvoke $r11.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $r9.<java.io.PrintStream: void println(java.lang.String)>($r12);
+
+        l0 = staticinvoke <java.lang.System: long currentTimeMillis()>();
+
+        $r13 = new SumVisitor;
+
+        specialinvoke $r13.<SumVisitor: void <init>()>();
+
+        virtualinvoke r2.<Shop: void accept(visitor)>($r13);
+
+        l1 = staticinvoke <java.lang.System: long currentTimeMillis()>();
+
+        l2 = l1 - l0;
+
+        $r15 = <java.lang.System: java.io.PrintStream out>;
+
+        $r14 = new java.lang.StringBuilder;
+
+        specialinvoke $r14.<java.lang.StringBuilder: void <init>()>();
+
+        $r16 = virtualinvoke $r14.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Calculated: ");
+
+        $l4 = $r13.<SumVisitor: long total>;
+
+        $r17 = virtualinvoke $r16.<java.lang.StringBuilder: java.lang.StringBuilder append(long)>($l4);
+
+        $r18 = virtualinvoke $r17.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $r15.<java.io.PrintStream: void println(java.lang.String)>($r18);
+
+        $r19 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $r19.<java.io.PrintStream: void println(long)>(l2);
+
+        return;
+    }
+}

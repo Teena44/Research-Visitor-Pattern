@@ -1,0 +1,7 @@
+public class Nil_Obj extends java.lang.Object implements Item_Obj
+{
+    public SumVisitor r0;
+    public Nil r1;
+    public long total;
+    public Nil param0;
+}

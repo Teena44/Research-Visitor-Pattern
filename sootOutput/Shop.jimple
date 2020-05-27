@@ -1,0 +1,82 @@
+class Shop extends java.lang.Object implements Item
+{
+    public Food f0;
+    public Apparel f1;
+    public Accessor f2;
+    public Item next;
+    public int visitableId;
+
+    public void <init>()
+    {
+        Shop r0;
+        Food $r1;
+        Apparel $r2;
+        Accessor $r3;
+        Nil $r4;
+
+        r0 := @this: Shop;
+
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+
+        $r1 = new Food;
+
+        specialinvoke $r1.<Food: void <init>()>();
+
+        r0.<Shop: Food f0> = $r1;
+
+        $r2 = new Apparel;
+
+        specialinvoke $r2.<Apparel: void <init>()>();
+
+        r0.<Shop: Apparel f1> = $r2;
+
+        $r3 = new Accessor;
+
+        specialinvoke $r3.<Accessor: void <init>()>();
+
+        r0.<Shop: Accessor f2> = $r3;
+
+        $r4 = new Nil;
+
+        specialinvoke $r4.<Nil: void <init>()>();
+
+        r0.<Shop: Item next> = $r4;
+
+        return;
+    }
+
+    public void accept(visitor)
+    {
+        Shop r0;
+        visitor r1;
+
+        r0 := @this: Shop;
+
+        r1 := @parameter0: visitor;
+
+        interfaceinvoke r1.<visitor: void visit(Shop)>(r0);
+
+        return;
+    }
+
+    public Item getNext()
+    {
+        Shop r0;
+        Item $r1;
+
+        r0 := @this: Shop;
+
+        $r1 = r0.<Shop: Item next>;
+
+        return $r1;
+    }
+
+    public int getMyId()
+    {
+        Shop r0;
+
+        r0 := @this: Shop;
+
+        return 2;
+    }
+}

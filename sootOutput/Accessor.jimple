@@ -1,0 +1,74 @@
+class Accessor extends java.lang.Object implements Item
+{
+    public Hat f0;
+    public Bag f1;
+    public Item next;
+    public int visitableId;
+
+    public void <init>()
+    {
+        Accessor r0;
+        Hat $r1;
+        Bag $r2;
+        Nil $r3;
+
+        r0 := @this: Accessor;
+
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+
+        $r1 = new Hat;
+
+        specialinvoke $r1.<Hat: void <init>()>();
+
+        r0.<Accessor: Hat f0> = $r1;
+
+        $r2 = new Bag;
+
+        specialinvoke $r2.<Bag: void <init>()>();
+
+        r0.<Accessor: Bag f1> = $r2;
+
+        $r3 = new Nil;
+
+        specialinvoke $r3.<Nil: void <init>()>();
+
+        r0.<Accessor: Item next> = $r3;
+
+        return;
+    }
+
+    public void accept(visitor)
+    {
+        Accessor r0;
+        visitor r1;
+
+        r0 := @this: Accessor;
+
+        r1 := @parameter0: visitor;
+
+        interfaceinvoke r1.<visitor: void visit(Accessor)>(r0);
+
+        return;
+    }
+
+    public Item getNext()
+    {
+        Accessor r0;
+        Item $r1;
+
+        r0 := @this: Accessor;
+
+        $r1 = r0.<Accessor: Item next>;
+
+        return $r1;
+    }
+
+    public int getMyId()
+    {
+        Accessor r0;
+
+        r0 := @this: Accessor;
+
+        return 9;
+    }
+}

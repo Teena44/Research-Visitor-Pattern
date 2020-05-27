@@ -1,0 +1,958 @@
+public class Translate extends java.lang.Object
+{
+
+    void translation()
+    {
+        StackObj[] stack;
+        int stackIterator, index, var3, switchId, var57, var60, var63, var66, var69, var72, var75, var78, var81, var84;
+        StackObj allocVariable, var0, s, var1, var6, var13, var19, var23, var27, var33, var37, var41, var47, var51, var55, var58, var61, var64, var67, var70, var73, var76, var79, var82;
+        boolean flag;
+        Item var2, var4, var11, var17, var21, var25, var31, var35, var39, var45, var49, var53, var56, var59, var62, var65, var68, var71, var74, var77, var80, var83;
+        Shop_Obj ShopO;
+        Food_Obj FoodO;
+        Fruit_Obj FruitO;
+        Vegetable_Obj VegetableO;
+        Apparel_Obj ApparelO;
+        Shirt_Obj ShirtO;
+        Pant_Obj PantO;
+        Accessor_Obj AccessorO;
+        Hat_Obj HatO;
+        Bag_Obj BagO;
+        Nil_Obj NilO;
+        Shop var5;
+        Food var12;
+        Fruit var18;
+        Vegetable var22;
+        Apparel var26;
+        Shirt var32;
+        Pant var36;
+        Accessor var40;
+        Hat var46;
+        Bag var50;
+        Nil var54;
+        java.io.PrintStream tz0, tz1, tz2, tz3, tz4, tz5, tz6, tz7, tz8, tz9, tz10, tz11, tz12, tz13, tz14, tz15, tz16, tz17, tz18, tz19;
+
+        stack = newarray (StackObj)[100];
+
+        stackIterator = 0;
+
+     label01:
+        nop;
+
+        if stackIterator >= 100 goto label02;
+
+        allocVariable = new StackObj;
+
+        specialinvoke allocVariable.<StackObj: void <init>()>();
+
+        stack[stackIterator] = allocVariable;
+
+        stackIterator = 1 + stackIterator;
+
+        goto label01;
+
+     label02:
+        nop;
+
+        index = 0;
+
+        var0 = stack[index];
+
+        var0.<StackObj: int task> = 0;
+
+        flag = 1;
+
+        var1 = stack[index];
+
+        var2 = var1.<StackObj: Item x>;
+
+        s.<StackObj: Item x> = var2;
+
+        var3 = var1.<StackObj: int task>;
+
+        s.<StackObj: int task> = var3;
+
+     label03:
+        nop;
+
+        goto label36;
+
+     label04:
+        nop;
+
+        var4 = s.<StackObj: Item x>;
+
+        var5 = (Shop) var4;
+
+        var6 = stack[index];
+
+        var6.<StackObj: int task> = 12;
+
+        var6.<StackObj: Item x> = var5;
+
+        index = index + 1;
+
+        $r11 = r1.<Shop: Item next>;
+
+        var7 = stack[index];
+
+        var7.<StackObj: Item x> = $r11;
+
+        var7.<StackObj: int task> = 0;
+
+        index = index + 1;
+
+        $r10 = r1.<Shop: Accessor f2>;
+
+        var8 = stack[index];
+
+        var8.<StackObj: Item x> = $r10;
+
+        var8.<StackObj: int task> = 0;
+
+        index = index + 1;
+
+        $r9 = r1.<Shop: Apparel f1>;
+
+        var9 = stack[index];
+
+        var9.<StackObj: Item x> = $r9;
+
+        var9.<StackObj: int task> = 0;
+
+        index = index + 1;
+
+        $r8 = r1.<Shop: Food f0>;
+
+        var10 = stack[index];
+
+        var10.<StackObj: Item x> = $r8;
+
+        var10.<StackObj: int task> = 0;
+
+        index = index + 1;
+
+        r0 := @this: SumVisitor;
+
+        r1 := @parameter0: Shop;
+
+        $r3 = <java.lang.System: java.io.PrintStream out>;
+
+        $r2 = new java.lang.StringBuilder;
+
+        specialinvoke $r2.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = r1.<Shop: Food f0>;
+
+        $r5 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($r4);
+
+        $r6 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" is here");
+
+        $r7 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $r3.<java.io.PrintStream: void println(java.lang.String)>($r7);
+
+        goto label37;
+
+     label05:
+        nop;
+
+        var11 = s.<StackObj: Item x>;
+
+        var12 = (Food) var11;
+
+        var13 = stack[index];
+
+        var13.<StackObj: int task> = 13;
+
+        var13.<StackObj: Item x> = var12;
+
+        index = index + 1;
+
+        $r4 = r1.<Food: Item next>;
+
+        var14 = stack[index];
+
+        var14.<StackObj: Item x> = $r4;
+
+        var14.<StackObj: int task> = 0;
+
+        index = index + 1;
+
+        $r3 = r1.<Food: Vegetable f1>;
+
+        var15 = stack[index];
+
+        var15.<StackObj: Item x> = $r3;
+
+        var15.<StackObj: int task> = 0;
+
+        index = index + 1;
+
+        $r2 = r1.<Food: Fruit f0>;
+
+        var16 = stack[index];
+
+        var16.<StackObj: Item x> = $r2;
+
+        var16.<StackObj: int task> = 0;
+
+        index = index + 1;
+
+        r0 := @this: SumVisitor;
+
+        r1 := @parameter0: Food;
+
+        goto label37;
+
+     label06:
+        nop;
+
+        var17 = s.<StackObj: Item x>;
+
+        var18 = (Fruit) var17;
+
+        var19 = stack[index];
+
+        var19.<StackObj: int task> = 14;
+
+        var19.<StackObj: Item x> = var18;
+
+        index = index + 1;
+
+        $r2 = r1.<Fruit: Item next>;
+
+        var20 = stack[index];
+
+        var20.<StackObj: Item x> = $r2;
+
+        var20.<StackObj: int task> = 0;
+
+        index = index + 1;
+
+        r0 := @this: SumVisitor;
+
+        r1 := @parameter0: Fruit;
+
+        $l0 = r0.<SumVisitor: long total>;
+
+        $l1 = virtualinvoke r1.<Fruit: long getCost()>();
+
+        $l2 = $l0 + $l1;
+
+        r0.<SumVisitor: long total> = $l2;
+
+        goto label37;
+
+     label07:
+        nop;
+
+        var21 = s.<StackObj: Item x>;
+
+        var22 = (Vegetable) var21;
+
+        var23 = stack[index];
+
+        var23.<StackObj: int task> = 15;
+
+        var23.<StackObj: Item x> = var22;
+
+        index = index + 1;
+
+        $r2 = r1.<Vegetable: Item next>;
+
+        var24 = stack[index];
+
+        var24.<StackObj: Item x> = $r2;
+
+        var24.<StackObj: int task> = 0;
+
+        index = index + 1;
+
+        r0 := @this: SumVisitor;
+
+        r1 := @parameter0: Vegetable;
+
+        $l0 = r0.<SumVisitor: long total>;
+
+        $l1 = virtualinvoke r1.<Vegetable: long getCost()>();
+
+        $l2 = $l0 + $l1;
+
+        r0.<SumVisitor: long total> = $l2;
+
+        goto label37;
+
+     label08:
+        nop;
+
+        var25 = s.<StackObj: Item x>;
+
+        var26 = (Apparel) var25;
+
+        var27 = stack[index];
+
+        var27.<StackObj: int task> = 16;
+
+        var27.<StackObj: Item x> = var26;
+
+        index = index + 1;
+
+        $r4 = r1.<Apparel: Item next>;
+
+        var28 = stack[index];
+
+        var28.<StackObj: Item x> = $r4;
+
+        var28.<StackObj: int task> = 0;
+
+        index = index + 1;
+
+        $r3 = r1.<Apparel: Pant f1>;
+
+        var29 = stack[index];
+
+        var29.<StackObj: Item x> = $r3;
+
+        var29.<StackObj: int task> = 0;
+
+        index = index + 1;
+
+        $r2 = r1.<Apparel: Shirt f0>;
+
+        var30 = stack[index];
+
+        var30.<StackObj: Item x> = $r2;
+
+        var30.<StackObj: int task> = 0;
+
+        index = index + 1;
+
+        r0 := @this: SumVisitor;
+
+        r1 := @parameter0: Apparel;
+
+        goto label37;
+
+     label09:
+        nop;
+
+        var31 = s.<StackObj: Item x>;
+
+        var32 = (Shirt) var31;
+
+        var33 = stack[index];
+
+        var33.<StackObj: int task> = 17;
+
+        var33.<StackObj: Item x> = var32;
+
+        index = index + 1;
+
+        $r2 = r1.<Shirt: Item next>;
+
+        var34 = stack[index];
+
+        var34.<StackObj: Item x> = $r2;
+
+        var34.<StackObj: int task> = 0;
+
+        index = index + 1;
+
+        r0 := @this: SumVisitor;
+
+        r1 := @parameter0: Shirt;
+
+        $l0 = r0.<SumVisitor: long total>;
+
+        $l1 = virtualinvoke r1.<Shirt: long getCost()>();
+
+        $l2 = $l0 + $l1;
+
+        r0.<SumVisitor: long total> = $l2;
+
+        goto label37;
+
+     label10:
+        nop;
+
+        var35 = s.<StackObj: Item x>;
+
+        var36 = (Pant) var35;
+
+        var37 = stack[index];
+
+        var37.<StackObj: int task> = 18;
+
+        var37.<StackObj: Item x> = var36;
+
+        index = index + 1;
+
+        $r2 = r1.<Pant: Item next>;
+
+        var38 = stack[index];
+
+        var38.<StackObj: Item x> = $r2;
+
+        var38.<StackObj: int task> = 0;
+
+        index = index + 1;
+
+        r0 := @this: SumVisitor;
+
+        r1 := @parameter0: Pant;
+
+        $l0 = r0.<SumVisitor: long total>;
+
+        $l1 = virtualinvoke r1.<Pant: long getCost()>();
+
+        $l2 = $l0 + $l1;
+
+        r0.<SumVisitor: long total> = $l2;
+
+        goto label37;
+
+     label11:
+        nop;
+
+        var39 = s.<StackObj: Item x>;
+
+        var40 = (Accessor) var39;
+
+        var41 = stack[index];
+
+        var41.<StackObj: int task> = 19;
+
+        var41.<StackObj: Item x> = var40;
+
+        index = index + 1;
+
+        $r4 = r1.<Accessor: Item next>;
+
+        var42 = stack[index];
+
+        var42.<StackObj: Item x> = $r4;
+
+        var42.<StackObj: int task> = 0;
+
+        index = index + 1;
+
+        $r3 = r1.<Accessor: Bag f1>;
+
+        var43 = stack[index];
+
+        var43.<StackObj: Item x> = $r3;
+
+        var43.<StackObj: int task> = 0;
+
+        index = index + 1;
+
+        $r2 = r1.<Accessor: Hat f0>;
+
+        var44 = stack[index];
+
+        var44.<StackObj: Item x> = $r2;
+
+        var44.<StackObj: int task> = 0;
+
+        index = index + 1;
+
+        r0 := @this: SumVisitor;
+
+        r1 := @parameter0: Accessor;
+
+        goto label37;
+
+     label12:
+        nop;
+
+        var45 = s.<StackObj: Item x>;
+
+        var46 = (Hat) var45;
+
+        var47 = stack[index];
+
+        var47.<StackObj: int task> = 20;
+
+        var47.<StackObj: Item x> = var46;
+
+        index = index + 1;
+
+        $r2 = r1.<Hat: Item next>;
+
+        var48 = stack[index];
+
+        var48.<StackObj: Item x> = $r2;
+
+        var48.<StackObj: int task> = 0;
+
+        index = index + 1;
+
+        r0 := @this: SumVisitor;
+
+        r1 := @parameter0: Hat;
+
+        $l0 = r0.<SumVisitor: long total>;
+
+        $l1 = virtualinvoke r1.<Hat: long getCost()>();
+
+        $l2 = $l0 + $l1;
+
+        r0.<SumVisitor: long total> = $l2;
+
+        goto label37;
+
+     label13:
+        nop;
+
+        var49 = s.<StackObj: Item x>;
+
+        var50 = (Bag) var49;
+
+        var51 = stack[index];
+
+        var51.<StackObj: int task> = 21;
+
+        var51.<StackObj: Item x> = var50;
+
+        index = index + 1;
+
+        $r2 = r1.<Bag: Item next>;
+
+        var52 = stack[index];
+
+        var52.<StackObj: Item x> = $r2;
+
+        var52.<StackObj: int task> = 0;
+
+        index = index + 1;
+
+        r0 := @this: SumVisitor;
+
+        r1 := @parameter0: Bag;
+
+        $l0 = r0.<SumVisitor: long total>;
+
+        $l1 = virtualinvoke r1.<Bag: long getCost()>();
+
+        $l2 = $l0 + $l1;
+
+        r0.<SumVisitor: long total> = $l2;
+
+        goto label37;
+
+     label14:
+        nop;
+
+        var53 = s.<StackObj: Item x>;
+
+        var54 = (Nil) var53;
+
+        r0 := @this: SumVisitor;
+
+        r1 := @parameter0: Nil;
+
+        return;
+
+        goto label37;
+
+     label15:
+        nop;
+
+        tz0 = FoodO.<Food_Obj: java.io.PrintStream $r5>;
+
+        tz0 = <java.lang.System: java.io.PrintStream out>;
+
+        FoodO.<Food_Obj: java.io.PrintStream $r5> = tz0;
+
+        tz1 = FoodO.<Food_Obj: java.io.PrintStream $r5>;
+
+        virtualinvoke tz1.<java.io.PrintStream: void println(java.lang.String)>("Food");
+
+        if index > 0 goto label16;
+
+        flag = 0;
+
+        goto label37;
+
+     label16:
+        nop;
+
+        index = index - 1;
+
+        var55 = stack[index];
+
+        var56 = var55.<StackObj: Item x>;
+
+        s.<StackObj: Item x> = var56;
+
+        var57 = var55.<StackObj: int task>;
+
+        s.<StackObj: int task> = var57;
+
+        goto label37;
+
+     label17:
+        nop;
+
+        tz2 = FruitO.<Fruit_Obj: java.io.PrintStream $r3>;
+
+        tz2 = <java.lang.System: java.io.PrintStream out>;
+
+        FruitO.<Fruit_Obj: java.io.PrintStream $r3> = tz2;
+
+        tz3 = FruitO.<Fruit_Obj: java.io.PrintStream $r3>;
+
+        virtualinvoke tz3.<java.io.PrintStream: void println(java.lang.String)>("Fruit");
+
+        if index > 0 goto label18;
+
+        flag = 0;
+
+        goto label37;
+
+     label18:
+        nop;
+
+        index = index - 1;
+
+        var58 = stack[index];
+
+        var59 = var58.<StackObj: Item x>;
+
+        s.<StackObj: Item x> = var59;
+
+        var60 = var58.<StackObj: int task>;
+
+        s.<StackObj: int task> = var60;
+
+        goto label37;
+
+     label19:
+        nop;
+
+        tz4 = ApparelO.<Apparel_Obj: java.io.PrintStream $r5>;
+
+        tz4 = <java.lang.System: java.io.PrintStream out>;
+
+        ApparelO.<Apparel_Obj: java.io.PrintStream $r5> = tz4;
+
+        tz5 = ApparelO.<Apparel_Obj: java.io.PrintStream $r5>;
+
+        virtualinvoke tz5.<java.io.PrintStream: void println(java.lang.String)>("Apparel");
+
+        if index > 0 goto label20;
+
+        flag = 0;
+
+        goto label37;
+
+     label20:
+        nop;
+
+        index = index - 1;
+
+        var61 = stack[index];
+
+        var62 = var61.<StackObj: Item x>;
+
+        s.<StackObj: Item x> = var62;
+
+        var63 = var61.<StackObj: int task>;
+
+        s.<StackObj: int task> = var63;
+
+        goto label37;
+
+     label21:
+        nop;
+
+        tz6 = PantO.<Pant_Obj: java.io.PrintStream $r3>;
+
+        tz6 = <java.lang.System: java.io.PrintStream out>;
+
+        PantO.<Pant_Obj: java.io.PrintStream $r3> = tz6;
+
+        tz7 = PantO.<Pant_Obj: java.io.PrintStream $r3>;
+
+        virtualinvoke tz7.<java.io.PrintStream: void println(java.lang.String)>("Pant");
+
+        if index > 0 goto label22;
+
+        flag = 0;
+
+        goto label37;
+
+     label22:
+        nop;
+
+        index = index - 1;
+
+        var64 = stack[index];
+
+        var65 = var64.<StackObj: Item x>;
+
+        s.<StackObj: Item x> = var65;
+
+        var66 = var64.<StackObj: int task>;
+
+        s.<StackObj: int task> = var66;
+
+        goto label37;
+
+     label23:
+        nop;
+
+        tz8 = BagO.<Bag_Obj: java.io.PrintStream $r3>;
+
+        tz8 = <java.lang.System: java.io.PrintStream out>;
+
+        BagO.<Bag_Obj: java.io.PrintStream $r3> = tz8;
+
+        tz9 = BagO.<Bag_Obj: java.io.PrintStream $r3>;
+
+        virtualinvoke tz9.<java.io.PrintStream: void println(java.lang.String)>("Bag");
+
+        if index > 0 goto label24;
+
+        flag = 0;
+
+        goto label37;
+
+     label24:
+        nop;
+
+        index = index - 1;
+
+        var67 = stack[index];
+
+        var68 = var67.<StackObj: Item x>;
+
+        s.<StackObj: Item x> = var68;
+
+        var69 = var67.<StackObj: int task>;
+
+        s.<StackObj: int task> = var69;
+
+        goto label37;
+
+     label25:
+        nop;
+
+        tz10 = HatO.<Hat_Obj: java.io.PrintStream $r3>;
+
+        tz10 = <java.lang.System: java.io.PrintStream out>;
+
+        HatO.<Hat_Obj: java.io.PrintStream $r3> = tz10;
+
+        tz11 = HatO.<Hat_Obj: java.io.PrintStream $r3>;
+
+        virtualinvoke tz11.<java.io.PrintStream: void println(java.lang.String)>("Hat");
+
+        if index > 0 goto label26;
+
+        flag = 0;
+
+        goto label37;
+
+     label26:
+        nop;
+
+        index = index - 1;
+
+        var70 = stack[index];
+
+        var71 = var70.<StackObj: Item x>;
+
+        s.<StackObj: Item x> = var71;
+
+        var72 = var70.<StackObj: int task>;
+
+        s.<StackObj: int task> = var72;
+
+        goto label37;
+
+     label27:
+        nop;
+
+        tz12 = ShopO.<Shop_Obj: java.io.PrintStream $r12>;
+
+        tz12 = <java.lang.System: java.io.PrintStream out>;
+
+        ShopO.<Shop_Obj: java.io.PrintStream $r12> = tz12;
+
+        tz13 = ShopO.<Shop_Obj: java.io.PrintStream $r12>;
+
+        virtualinvoke tz13.<java.io.PrintStream: void println(java.lang.String)>("Shop");
+
+        if index > 0 goto label28;
+
+        flag = 0;
+
+        goto label37;
+
+     label28:
+        nop;
+
+        index = index - 1;
+
+        var73 = stack[index];
+
+        var74 = var73.<StackObj: Item x>;
+
+        s.<StackObj: Item x> = var74;
+
+        var75 = var73.<StackObj: int task>;
+
+        s.<StackObj: int task> = var75;
+
+        goto label37;
+
+     label29:
+        nop;
+
+        tz14 = ShirtO.<Shirt_Obj: java.io.PrintStream $r3>;
+
+        tz14 = <java.lang.System: java.io.PrintStream out>;
+
+        ShirtO.<Shirt_Obj: java.io.PrintStream $r3> = tz14;
+
+        tz15 = ShirtO.<Shirt_Obj: java.io.PrintStream $r3>;
+
+        virtualinvoke tz15.<java.io.PrintStream: void println(java.lang.String)>("Shirt");
+
+        if index > 0 goto label30;
+
+        flag = 0;
+
+        goto label37;
+
+     label30:
+        nop;
+
+        index = index - 1;
+
+        var76 = stack[index];
+
+        var77 = var76.<StackObj: Item x>;
+
+        s.<StackObj: Item x> = var77;
+
+        var78 = var76.<StackObj: int task>;
+
+        s.<StackObj: int task> = var78;
+
+        goto label37;
+
+     label31:
+        nop;
+
+        tz16 = VegetableO.<Vegetable_Obj: java.io.PrintStream $r3>;
+
+        tz16 = <java.lang.System: java.io.PrintStream out>;
+
+        VegetableO.<Vegetable_Obj: java.io.PrintStream $r3> = tz16;
+
+        tz17 = VegetableO.<Vegetable_Obj: java.io.PrintStream $r3>;
+
+        virtualinvoke tz17.<java.io.PrintStream: void println(java.lang.String)>("Vegetable");
+
+        if index > 0 goto label32;
+
+        flag = 0;
+
+        goto label37;
+
+     label32:
+        nop;
+
+        index = index - 1;
+
+        var79 = stack[index];
+
+        var80 = var79.<StackObj: Item x>;
+
+        s.<StackObj: Item x> = var80;
+
+        var81 = var79.<StackObj: int task>;
+
+        s.<StackObj: int task> = var81;
+
+        goto label37;
+
+     label33:
+        nop;
+
+        tz18 = AccessorO.<Accessor_Obj: java.io.PrintStream $r5>;
+
+        tz18 = <java.lang.System: java.io.PrintStream out>;
+
+        AccessorO.<Accessor_Obj: java.io.PrintStream $r5> = tz18;
+
+        tz19 = AccessorO.<Accessor_Obj: java.io.PrintStream $r5>;
+
+        virtualinvoke tz19.<java.io.PrintStream: void println(java.lang.String)>("Accessor");
+
+        if index > 0 goto label34;
+
+        flag = 0;
+
+        goto label37;
+
+     label34:
+        nop;
+
+        index = index - 1;
+
+        var82 = stack[index];
+
+        var83 = var82.<StackObj: Item x>;
+
+        s.<StackObj: Item x> = var83;
+
+        var84 = var82.<StackObj: int task>;
+
+        s.<StackObj: int task> = var84;
+
+        goto label37;
+
+     label35:
+        nop;
+
+        goto label37;
+
+     label36:
+        nop;
+
+        tableswitch(switchId)
+        {
+            case 1: goto label04;
+            case 2: goto label05;
+            case 3: goto label06;
+            case 4: goto label07;
+            case 5: goto label08;
+            case 6: goto label09;
+            case 7: goto label10;
+            case 8: goto label11;
+            case 9: goto label12;
+            case 10: goto label13;
+            case 11: goto label14;
+            case 12: goto label27;
+            case 13: goto label15;
+            case 14: goto label17;
+            case 15: goto label31;
+            case 16: goto label19;
+            case 17: goto label29;
+            case 18: goto label21;
+            case 19: goto label33;
+            case 20: goto label25;
+            case 21: goto label23;
+            default: goto label35;
+        };
+
+     label37:
+        nop;
+
+        if flag == 1 goto label03;
+    }
+}

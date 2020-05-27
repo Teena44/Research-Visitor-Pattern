@@ -1,0 +1,404 @@
+class SumVisitor extends java.lang.Object implements visitor
+{
+    long total;
+
+    void <init>()
+    {
+        SumVisitor r0;
+
+        r0 := @this: SumVisitor;
+
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+
+        r0.<SumVisitor: long total> = 0L;
+
+        return;
+    }
+
+    public void visitDummy()
+    {
+        SumVisitor r0;
+        Nil[] r1;
+        Nil $r2;
+        java.io.PrintStream $r3, $r4, $r5;
+        int i0;
+
+        r0 := @this: SumVisitor;
+
+        r1 = newarray (Nil)[100];
+
+        i0 = 0;
+
+     label1:
+        $r2 = new Nil;
+
+        specialinvoke $r2.<Nil: void <init>()>();
+
+        r1[i0] = $r2;
+
+        i0 = i0 + 1;
+
+        if i0 > 10 goto label1;
+
+        tableswitch(i0)
+        {
+            case 0: goto label2;
+            case 1: goto label3;
+            case 2: goto label4;
+            default: goto label5;
+        };
+
+     label2:
+        $r3 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $r3.<java.io.PrintStream: void println(java.lang.String)>("0");
+
+        goto label5;
+
+     label3:
+        $r5 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $r5.<java.io.PrintStream: void println(java.lang.String)>("1");
+
+        goto label5;
+
+     label4:
+        $r4 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $r4.<java.io.PrintStream: void println(java.lang.String)>("2");
+
+     label5:
+        return;
+    }
+
+    public void visit(Shop)
+    {
+        SumVisitor r0;
+        Shop r1;
+        Food $r2;
+        Apparel $r3;
+        Accessor $r4;
+        Item $r5;
+        java.io.PrintStream $r6;
+
+        r0 := @this: SumVisitor;
+
+        r1 := @parameter0: Shop;
+
+        $r2 = r1.<Shop: Food f0>;
+
+        virtualinvoke $r2.<Food: void accept(visitor)>(r0);
+
+        $r3 = r1.<Shop: Apparel f1>;
+
+        virtualinvoke $r3.<Apparel: void accept(visitor)>(r0);
+
+        $r4 = r1.<Shop: Accessor f2>;
+
+        virtualinvoke $r4.<Accessor: void accept(visitor)>(r0);
+
+        $r5 = r1.<Shop: Item next>;
+
+        interfaceinvoke $r5.<Item: void accept(visitor)>(r0);
+
+        $r6 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $r6.<java.io.PrintStream: void println(java.lang.String)>("Shop");
+
+        return;
+    }
+
+    public void visit(Food)
+    {
+        SumVisitor r0;
+        Food r1;
+        Fruit $r2;
+        Vegetable $r3;
+        Item $r4;
+        java.io.PrintStream $r5;
+
+        r0 := @this: SumVisitor;
+
+        r1 := @parameter0: Food;
+
+        $r2 = r1.<Food: Fruit f0>;
+
+        virtualinvoke $r2.<Fruit: void accept(visitor)>(r0);
+
+        $r3 = r1.<Food: Vegetable f1>;
+
+        virtualinvoke $r3.<Vegetable: void accept(visitor)>(r0);
+
+        $r4 = r1.<Food: Item next>;
+
+        interfaceinvoke $r4.<Item: void accept(visitor)>(r0);
+
+        $r5 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $r5.<java.io.PrintStream: void println(java.lang.String)>("Food");
+
+        return;
+    }
+
+    public void visit(Fruit)
+    {
+        SumVisitor r0;
+        Fruit r1;
+        long $l0, $l1, $l2;
+        Item $r2;
+        java.io.PrintStream $r3;
+
+        r0 := @this: SumVisitor;
+
+        r1 := @parameter0: Fruit;
+
+        $l0 = r0.<SumVisitor: long total>;
+
+        $l1 = virtualinvoke r1.<Fruit: long getCost()>();
+
+        $l2 = $l0 + $l1;
+
+        r0.<SumVisitor: long total> = $l2;
+
+        $r2 = r1.<Fruit: Item next>;
+
+        interfaceinvoke $r2.<Item: void accept(visitor)>(r0);
+
+        $r3 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $r3.<java.io.PrintStream: void println(java.lang.String)>("Fruit");
+
+        return;
+    }
+
+    public void visit(Vegetable)
+    {
+        SumVisitor r0;
+        Vegetable r1;
+        long $l0, $l1, $l2;
+        Item $r2;
+        java.io.PrintStream $r3;
+
+        r0 := @this: SumVisitor;
+
+        r1 := @parameter0: Vegetable;
+
+        $l0 = r0.<SumVisitor: long total>;
+
+        $l1 = virtualinvoke r1.<Vegetable: long getCost()>();
+
+        $l2 = $l0 + $l1;
+
+        r0.<SumVisitor: long total> = $l2;
+
+        $r2 = r1.<Vegetable: Item next>;
+
+        interfaceinvoke $r2.<Item: void accept(visitor)>(r0);
+
+        $r3 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $r3.<java.io.PrintStream: void println(java.lang.String)>("Vegetable");
+
+        return;
+    }
+
+    public void visit(Apparel)
+    {
+        SumVisitor r0;
+        Apparel r1;
+        Shirt $r2;
+        Pant $r3;
+        Item $r4;
+        java.io.PrintStream $r5;
+
+        r0 := @this: SumVisitor;
+
+        r1 := @parameter0: Apparel;
+
+        $r2 = r1.<Apparel: Shirt f0>;
+
+        virtualinvoke $r2.<Shirt: void accept(visitor)>(r0);
+
+        $r3 = r1.<Apparel: Pant f1>;
+
+        virtualinvoke $r3.<Pant: void accept(visitor)>(r0);
+
+        $r4 = r1.<Apparel: Item next>;
+
+        interfaceinvoke $r4.<Item: void accept(visitor)>(r0);
+
+        $r5 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $r5.<java.io.PrintStream: void println(java.lang.String)>("Apparel");
+
+        return;
+    }
+
+    public void visit(Shirt)
+    {
+        SumVisitor r0;
+        Shirt r1;
+        long $l0, $l1, $l2;
+        Item $r2;
+        java.io.PrintStream $r3;
+
+        r0 := @this: SumVisitor;
+
+        r1 := @parameter0: Shirt;
+
+        $l0 = r0.<SumVisitor: long total>;
+
+        $l1 = virtualinvoke r1.<Shirt: long getCost()>();
+
+        $l2 = $l0 + $l1;
+
+        r0.<SumVisitor: long total> = $l2;
+
+        $r2 = r1.<Shirt: Item next>;
+
+        interfaceinvoke $r2.<Item: void accept(visitor)>(r0);
+
+        $r3 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $r3.<java.io.PrintStream: void println(java.lang.String)>("Shirt");
+
+        return;
+    }
+
+    public void visit(Pant)
+    {
+        SumVisitor r0;
+        Pant r1;
+        long $l0, $l1, $l2;
+        Item $r2;
+        java.io.PrintStream $r3;
+
+        r0 := @this: SumVisitor;
+
+        r1 := @parameter0: Pant;
+
+        $l0 = r0.<SumVisitor: long total>;
+
+        $l1 = virtualinvoke r1.<Pant: long getCost()>();
+
+        $l2 = $l0 + $l1;
+
+        r0.<SumVisitor: long total> = $l2;
+
+        $r2 = r1.<Pant: Item next>;
+
+        interfaceinvoke $r2.<Item: void accept(visitor)>(r0);
+
+        $r3 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $r3.<java.io.PrintStream: void println(java.lang.String)>("Pant");
+
+        return;
+    }
+
+    public void visit(Accessor)
+    {
+        SumVisitor r0;
+        Accessor r1;
+        Hat $r2;
+        Bag $r3;
+        Item $r4;
+        java.io.PrintStream $r5;
+
+        r0 := @this: SumVisitor;
+
+        r1 := @parameter0: Accessor;
+
+        $r2 = r1.<Accessor: Hat f0>;
+
+        virtualinvoke $r2.<Hat: void accept(visitor)>(r0);
+
+        $r3 = r1.<Accessor: Bag f1>;
+
+        virtualinvoke $r3.<Bag: void accept(visitor)>(r0);
+
+        $r4 = r1.<Accessor: Item next>;
+
+        interfaceinvoke $r4.<Item: void accept(visitor)>(r0);
+
+        $r5 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $r5.<java.io.PrintStream: void println(java.lang.String)>("Accessor");
+
+        return;
+    }
+
+    public void visit(Hat)
+    {
+        SumVisitor r0;
+        Hat r1;
+        long $l0, $l1, $l2;
+        Item $r2;
+        java.io.PrintStream $r3;
+
+        r0 := @this: SumVisitor;
+
+        r1 := @parameter0: Hat;
+
+        $l0 = r0.<SumVisitor: long total>;
+
+        $l1 = virtualinvoke r1.<Hat: long getCost()>();
+
+        $l2 = $l0 + $l1;
+
+        r0.<SumVisitor: long total> = $l2;
+
+        $r2 = r1.<Hat: Item next>;
+
+        interfaceinvoke $r2.<Item: void accept(visitor)>(r0);
+
+        $r3 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $r3.<java.io.PrintStream: void println(java.lang.String)>("Hat");
+
+        return;
+    }
+
+    public void visit(Bag)
+    {
+        SumVisitor r0;
+        Bag r1;
+        long $l0, $l1, $l2;
+        Item $r2;
+        java.io.PrintStream $r3;
+
+        r0 := @this: SumVisitor;
+
+        r1 := @parameter0: Bag;
+
+        $l0 = r0.<SumVisitor: long total>;
+
+        $l1 = virtualinvoke r1.<Bag: long getCost()>();
+
+        $l2 = $l0 + $l1;
+
+        r0.<SumVisitor: long total> = $l2;
+
+        $r2 = r1.<Bag: Item next>;
+
+        interfaceinvoke $r2.<Item: void accept(visitor)>(r0);
+
+        $r3 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $r3.<java.io.PrintStream: void println(java.lang.String)>("Bag");
+
+        return;
+    }
+
+    public void visit(Nil)
+    {
+        SumVisitor r0;
+        Nil r1;
+
+        r0 := @this: SumVisitor;
+
+        r1 := @parameter0: Nil;
+
+        return;
+    }
+}

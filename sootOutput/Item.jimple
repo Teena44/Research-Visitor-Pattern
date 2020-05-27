@@ -1,0 +1,9 @@
+interface  Item extends java.lang.Object
+{
+
+    public abstract void accept(visitor);
+
+    public abstract Item getNext();
+
+    public abstract int getMyId();
+}

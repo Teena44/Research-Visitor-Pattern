@@ -1,0 +1,74 @@
+class Food extends java.lang.Object implements Item
+{
+    public Fruit f0;
+    public Vegetable f1;
+    public Item next;
+    public int visitableId;
+
+    public void <init>()
+    {
+        Food r0;
+        Fruit $r1;
+        Vegetable $r2;
+        Nil $r3;
+
+        r0 := @this: Food;
+
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+
+        $r1 = new Fruit;
+
+        specialinvoke $r1.<Fruit: void <init>()>();
+
+        r0.<Food: Fruit f0> = $r1;
+
+        $r2 = new Vegetable;
+
+        specialinvoke $r2.<Vegetable: void <init>()>();
+
+        r0.<Food: Vegetable f1> = $r2;
+
+        $r3 = new Nil;
+
+        specialinvoke $r3.<Nil: void <init>()>();
+
+        r0.<Food: Item next> = $r3;
+
+        return;
+    }
+
+    public void accept(visitor)
+    {
+        Food r0;
+        visitor r1;
+
+        r0 := @this: Food;
+
+        r1 := @parameter0: visitor;
+
+        interfaceinvoke r1.<visitor: void visit(Food)>(r0);
+
+        return;
+    }
+
+    public Item getNext()
+    {
+        Food r0;
+        Item $r1;
+
+        r0 := @this: Food;
+
+        $r1 = r0.<Food: Item next>;
+
+        return $r1;
+    }
+
+    public int getMyId()
+    {
+        Food r0;
+
+        r0 := @this: Food;
+
+        return 11;
+    }
+}

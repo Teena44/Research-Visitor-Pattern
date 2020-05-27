@@ -1,0 +1,12 @@
+public class Shop_Obj extends java.lang.Object implements Item_Obj
+{
+    public SumVisitor r0;
+    public Shop r1;
+    public Food $r2;
+    public Apparel $r3;
+    public Accessor $r4;
+    public Item $r5;
+    public java.io.PrintStream $r6;
+    public long total;
+    public Shop param0;
+}

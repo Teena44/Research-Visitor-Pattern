@@ -1,0 +1,1018 @@
+class Shopping_iterative extends java.lang.Object
+{
+
+    void <init>()
+    {
+        Shopping_iterative r0;
+
+        r0 := @this: Shopping_iterative;
+
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public static void main(java.lang.String[])
+    {
+        java.lang.String[] r0;
+        Shop r3, $r5, $r6, $r31, $r35, $r36, $r49, $r53, $r54, $r109, $r115, $r119, $r120, $r142, $r146, $r147, $r172, $r173, $r174, $r176, $r177;
+        long l0, l1, l2, $l4, $l5, $l7, $l9, $l11, $l13, $l15, l18, l19, l20, l21, l22, l23, l24, l25, l26, l27, l28, l29, l30, l31, l32, l33, l34, l35, l36, l37, l38, l39, l40, l41, l42, l43, l44, l45, l46, l47, l48, l49, l50, l51, l52, l53, l54, l55, l56, l57, l58, l59, l60, l61, l62, l63, l64, l65, l66, l67, l68, l69, l70, l71, l72, l73;
+        java.util.Random $r7;
+        byte $b3, $b6, $b8, $b10, $b12, $b14, $b16;
+        Nil $r8;
+        Bag $r9, $r43, $r47, $r48, $r55, $r59, $r60, $r94, $r98, $r99, $r113, $r114, $r136, $r140, $r141, $r143, $r144, $r169, $r199;
+        java.lang.StringBuilder $r10, $r12, $r13, $r16, $r18, $r19;
+        java.io.PrintStream $r11, $r17, $r21;
+        java.lang.String $r14, $r20;
+        SumVisitor $r15;
+        Food $r22, $r26, $r27, $r76, $r80, $r81, $r97, $r101, $r102, $r121, $r125, $r126, $r148, $r152, $r153, $r175, $r179, $r180;
+        Hat $r23, $r24, $r58, $r62, $r63, $r79, $r85, $r89, $r90, $r130, $r134, $r135, $r163, $r167, $r168, $r196, $r200, $r201;
+        Apparel $r25, $r29, $r30, $r64, $r68, $r69, $r83, $r84, $r106, $r110, $r111, $r139, $r166, $r170, $r171, $r184, $r188, $r189;
+        Fruit $r28, $r32, $r33, $r52, $r56, $r57, $r103, $r107, $r108, $r127, $r131, $r132, $r154, $r158, $r159, $r178, $r182, $r183;
+        Vegetable $r34, $r38, $r39, $r73, $r77, $r78, $r100, $r104, $r105, $r133, $r137, $r138, $r160, $r164, $r165, $r181, $r185, $r186;
+        Pant $r37, $r41, $r42, $r61, $r65, $r66, $r82, $r86, $r87, $r118, $r122, $r123, $r151, $r155, $r156, $r190, $r194, $r195;
+        Shirt $r40, $r44, $r45, $r70, $r74, $r75, $r88, $r92, $r93, $r112, $r116, $r117, $r145, $r149, $r150, $r187, $r191, $r192;
+        Accessor $r46, $r50, $r51, $r67, $r71, $r72, $r91, $r95, $r96, $r124, $r128, $r129, $r157, $r161, $r162, $r193, $r197, $r198;
+        Item r203, r204, r205, r206, r207, r208, r209, r210, r211, r212, r213, r214, r215, r216, r217, r218, r219, r220, r221, r222, r223, r224, r225, r226, r227, r228, r229, r230, r231, r232, r233, r234, r235, r236, r237, r238, r239, r240, r241, r242, r243, r244, r245, r246, r247, r248, r249, r250, r251, r252, r253, r254, r255, r256, r257;
+
+        r0 := @parameter0: java.lang.String[];
+
+        $r5 = new Shop;
+
+        specialinvoke $r5.<Shop: void <init>()>();
+
+        $r6 = new Shop;
+
+        specialinvoke $r6.<Shop: void <init>()>();
+
+        r203 = (Shop) $r5;
+
+        l18 = 0L + 6L;
+
+        $r7 = new java.util.Random;
+
+        specialinvoke $r7.<java.util.Random: void <init>()>();
+
+        l19 = 0L;
+
+     label1:
+        $b3 = l19 cmp 1500000L;
+
+        if $b3 > 0 goto label8;
+
+        $l5 = l19 % 6L;
+
+        $b6 = $l5 cmp 0L;
+
+        if $b6 != 0 goto label2;
+
+        $r173 = (Shop) r203;
+
+        $r172 = new Shop;
+
+        specialinvoke $r172.<Shop: void <init>()>();
+
+        $r173.<Shop: Item next> = $r172;
+
+        l20 = l18 + 6L;
+
+        $r174 = (Shop) r203;
+
+        r204 = $r174.<Shop: Item next>;
+
+        $r176 = (Shop) r204;
+
+        $r175 = new Food;
+
+        specialinvoke $r175.<Food: void <init>()>();
+
+        $r176.<Shop: Item next> = $r175;
+
+        l21 = l20 + 2L;
+
+        $r177 = (Shop) r204;
+
+        r205 = $r177.<Shop: Item next>;
+
+        $r179 = (Food) r205;
+
+        $r178 = new Fruit;
+
+        specialinvoke $r178.<Fruit: void <init>()>();
+
+        $r179.<Food: Item next> = $r178;
+
+        l22 = l21 + 1L;
+
+        $r180 = (Food) r205;
+
+        r206 = $r180.<Food: Item next>;
+
+        $r182 = (Fruit) r206;
+
+        $r181 = new Vegetable;
+
+        specialinvoke $r181.<Vegetable: void <init>()>();
+
+        $r182.<Fruit: Item next> = $r181;
+
+        l23 = l22 + 1L;
+
+        $r183 = (Fruit) r206;
+
+        r207 = $r183.<Fruit: Item next>;
+
+        $r185 = (Vegetable) r207;
+
+        $r184 = new Apparel;
+
+        specialinvoke $r184.<Apparel: void <init>()>();
+
+        $r185.<Vegetable: Item next> = $r184;
+
+        l24 = l23 + 2L;
+
+        $r186 = (Vegetable) r207;
+
+        r208 = $r186.<Vegetable: Item next>;
+
+        $r188 = (Apparel) r208;
+
+        $r187 = new Shirt;
+
+        specialinvoke $r187.<Shirt: void <init>()>();
+
+        $r188.<Apparel: Item next> = $r187;
+
+        l25 = l24 + 1L;
+
+        $r189 = (Apparel) r208;
+
+        r209 = $r189.<Apparel: Item next>;
+
+        $r191 = (Shirt) r209;
+
+        $r190 = new Pant;
+
+        specialinvoke $r190.<Pant: void <init>()>();
+
+        $r191.<Shirt: Item next> = $r190;
+
+        l26 = l25 + 1L;
+
+        $r192 = (Shirt) r209;
+
+        r210 = $r192.<Shirt: Item next>;
+
+        $r194 = (Pant) r210;
+
+        $r193 = new Accessor;
+
+        specialinvoke $r193.<Accessor: void <init>()>();
+
+        $r194.<Pant: Item next> = $r193;
+
+        l27 = l26 + 2L;
+
+        $r195 = (Pant) r210;
+
+        r211 = $r195.<Pant: Item next>;
+
+        $r197 = (Accessor) r211;
+
+        $r196 = new Hat;
+
+        specialinvoke $r196.<Hat: void <init>()>();
+
+        $r197.<Accessor: Item next> = $r196;
+
+        l28 = l27 + 1L;
+
+        $r198 = (Accessor) r211;
+
+        r212 = $r198.<Accessor: Item next>;
+
+        $r200 = (Hat) r212;
+
+        $r199 = new Bag;
+
+        specialinvoke $r199.<Bag: void <init>()>();
+
+        $r200.<Hat: Item next> = $r199;
+
+        l18 = l28 + 1L;
+
+        $r201 = (Hat) r212;
+
+        r203 = $r201.<Hat: Item next>;
+
+        goto label7;
+
+     label2:
+        $l7 = l19 % 6L;
+
+        $b8 = $l7 cmp 1L;
+
+        if $b8 != 0 goto label3;
+
+        $r143 = (Bag) r203;
+
+        $r142 = new Shop;
+
+        specialinvoke $r142.<Shop: void <init>()>();
+
+        $r143.<Bag: Item next> = $r142;
+
+        l29 = l18 + 6L;
+
+        $r144 = (Bag) r203;
+
+        r213 = $r144.<Bag: Item next>;
+
+        $r146 = (Shop) r213;
+
+        $r145 = new Shirt;
+
+        specialinvoke $r145.<Shirt: void <init>()>();
+
+        $r146.<Shop: Item next> = $r145;
+
+        l30 = l29 + 1L;
+
+        $r147 = (Shop) r213;
+
+        r214 = $r147.<Shop: Item next>;
+
+        $r149 = (Shirt) r214;
+
+        $r148 = new Food;
+
+        specialinvoke $r148.<Food: void <init>()>();
+
+        $r149.<Shirt: Item next> = $r148;
+
+        l31 = l30 + 2L;
+
+        $r150 = (Shirt) r214;
+
+        r215 = $r150.<Shirt: Item next>;
+
+        $r152 = (Food) r215;
+
+        $r151 = new Pant;
+
+        specialinvoke $r151.<Pant: void <init>()>();
+
+        $r152.<Food: Item next> = $r151;
+
+        l32 = l31 + 1L;
+
+        $r153 = (Food) r215;
+
+        r216 = $r153.<Food: Item next>;
+
+        $r155 = (Pant) r216;
+
+        $r154 = new Fruit;
+
+        specialinvoke $r154.<Fruit: void <init>()>();
+
+        $r155.<Pant: Item next> = $r154;
+
+        l33 = l32 + 1L;
+
+        $r156 = (Pant) r216;
+
+        r217 = $r156.<Pant: Item next>;
+
+        $r158 = (Fruit) r217;
+
+        $r157 = new Accessor;
+
+        specialinvoke $r157.<Accessor: void <init>()>();
+
+        $r158.<Fruit: Item next> = $r157;
+
+        l34 = l33 + 2L;
+
+        $r159 = (Fruit) r217;
+
+        r218 = $r159.<Fruit: Item next>;
+
+        $r161 = (Accessor) r218;
+
+        $r160 = new Vegetable;
+
+        specialinvoke $r160.<Vegetable: void <init>()>();
+
+        $r161.<Accessor: Item next> = $r160;
+
+        l35 = l34 + 1L;
+
+        $r162 = (Accessor) r218;
+
+        r219 = $r162.<Accessor: Item next>;
+
+        $r164 = (Vegetable) r219;
+
+        $r163 = new Hat;
+
+        specialinvoke $r163.<Hat: void <init>()>();
+
+        $r164.<Vegetable: Item next> = $r163;
+
+        l36 = l35 + 1L;
+
+        $r165 = (Vegetable) r219;
+
+        r220 = $r165.<Vegetable: Item next>;
+
+        $r167 = (Hat) r220;
+
+        $r166 = new Apparel;
+
+        specialinvoke $r166.<Apparel: void <init>()>();
+
+        $r167.<Hat: Item next> = $r166;
+
+        l37 = l36 + 2L;
+
+        $r168 = (Hat) r220;
+
+        r221 = $r168.<Hat: Item next>;
+
+        $r170 = (Apparel) r221;
+
+        $r169 = new Bag;
+
+        specialinvoke $r169.<Bag: void <init>()>();
+
+        $r170.<Apparel: Item next> = $r169;
+
+        l18 = l37 + 1L;
+
+        $r171 = (Apparel) r221;
+
+        r203 = $r171.<Apparel: Item next>;
+
+        goto label7;
+
+     label3:
+        $l9 = l19 % 6L;
+
+        $b10 = $l9 cmp 2L;
+
+        if $b10 != 0 goto label4;
+
+        $r113 = (Bag) r203;
+
+        $r112 = new Shirt;
+
+        specialinvoke $r112.<Shirt: void <init>()>();
+
+        $r113.<Bag: Item next> = $r112;
+
+        l38 = l18 + 1L;
+
+        $r114 = (Bag) r203;
+
+        r222 = $r114.<Bag: Item next>;
+
+        $r116 = (Shirt) r222;
+
+        $r115 = new Shop;
+
+        specialinvoke $r115.<Shop: void <init>()>();
+
+        $r116.<Shirt: Item next> = $r115;
+
+        l39 = l38 + 6L;
+
+        $r117 = (Shirt) r222;
+
+        r223 = $r117.<Shirt: Item next>;
+
+        $r119 = (Shop) r223;
+
+        $r118 = new Pant;
+
+        specialinvoke $r118.<Pant: void <init>()>();
+
+        $r119.<Shop: Item next> = $r118;
+
+        l40 = l39 + 1L;
+
+        $r120 = (Shop) r223;
+
+        r224 = $r120.<Shop: Item next>;
+
+        $r122 = (Pant) r224;
+
+        $r121 = new Food;
+
+        specialinvoke $r121.<Food: void <init>()>();
+
+        $r122.<Pant: Item next> = $r121;
+
+        l41 = l40 + 2L;
+
+        $r123 = (Pant) r224;
+
+        r225 = $r123.<Pant: Item next>;
+
+        $r125 = (Food) r225;
+
+        $r124 = new Accessor;
+
+        specialinvoke $r124.<Accessor: void <init>()>();
+
+        $r125.<Food: Item next> = $r124;
+
+        l42 = l41 + 2L;
+
+        $r126 = (Food) r225;
+
+        r226 = $r126.<Food: Item next>;
+
+        $r128 = (Accessor) r226;
+
+        $r127 = new Fruit;
+
+        specialinvoke $r127.<Fruit: void <init>()>();
+
+        $r128.<Accessor: Item next> = $r127;
+
+        l43 = l42 + 1L;
+
+        $r129 = (Accessor) r226;
+
+        r227 = $r129.<Accessor: Item next>;
+
+        $r131 = (Fruit) r227;
+
+        $r130 = new Hat;
+
+        specialinvoke $r130.<Hat: void <init>()>();
+
+        $r131.<Fruit: Item next> = $r130;
+
+        l44 = l43 + 1L;
+
+        $r132 = (Fruit) r227;
+
+        r228 = $r132.<Fruit: Item next>;
+
+        $r134 = (Hat) r228;
+
+        $r133 = new Vegetable;
+
+        specialinvoke $r133.<Vegetable: void <init>()>();
+
+        $r134.<Hat: Item next> = $r133;
+
+        l45 = l44 + 1L;
+
+        $r135 = (Hat) r228;
+
+        r229 = $r135.<Hat: Item next>;
+
+        $r137 = (Vegetable) r229;
+
+        $r136 = new Bag;
+
+        specialinvoke $r136.<Bag: void <init>()>();
+
+        $r137.<Vegetable: Item next> = $r136;
+
+        l46 = l45 + 1L;
+
+        $r138 = (Vegetable) r229;
+
+        r230 = $r138.<Vegetable: Item next>;
+
+        $r140 = (Bag) r230;
+
+        $r139 = new Apparel;
+
+        specialinvoke $r139.<Apparel: void <init>()>();
+
+        $r140.<Bag: Item next> = $r139;
+
+        l18 = l46 + 2L;
+
+        $r141 = (Bag) r230;
+
+        r203 = $r141.<Bag: Item next>;
+
+        goto label7;
+
+     label4:
+        $l11 = l19 % 6L;
+
+        $b12 = $l11 cmp 3L;
+
+        if $b12 != 0 goto label5;
+
+        $r83 = (Apparel) r203;
+
+        $r82 = new Pant;
+
+        specialinvoke $r82.<Pant: void <init>()>();
+
+        $r83.<Apparel: Item next> = $r82;
+
+        l47 = l18 + 1L;
+
+        $r84 = (Apparel) r203;
+
+        r231 = $r84.<Apparel: Item next>;
+
+        $r86 = (Pant) r231;
+
+        $r85 = new Hat;
+
+        specialinvoke $r85.<Hat: void <init>()>();
+
+        $r86.<Pant: Item next> = $r85;
+
+        l48 = l47 + 1L;
+
+        $r87 = (Pant) r231;
+
+        r232 = $r87.<Pant: Item next>;
+
+        $r89 = (Hat) r232;
+
+        $r88 = new Shirt;
+
+        specialinvoke $r88.<Shirt: void <init>()>();
+
+        $r89.<Hat: Item next> = $r88;
+
+        l49 = l48 + 1L;
+
+        $r90 = (Hat) r232;
+
+        r233 = $r90.<Hat: Item next>;
+
+        $r92 = (Shirt) r233;
+
+        $r91 = new Accessor;
+
+        specialinvoke $r91.<Accessor: void <init>()>();
+
+        $r92.<Shirt: Item next> = $r91;
+
+        l50 = l49 + 2L;
+
+        $r93 = (Shirt) r233;
+
+        r234 = $r93.<Shirt: Item next>;
+
+        $r95 = (Accessor) r234;
+
+        $r94 = new Bag;
+
+        specialinvoke $r94.<Bag: void <init>()>();
+
+        $r95.<Accessor: Item next> = $r94;
+
+        l51 = l50 + 1L;
+
+        $r96 = (Accessor) r234;
+
+        r235 = $r96.<Accessor: Item next>;
+
+        $r98 = (Bag) r235;
+
+        $r97 = new Food;
+
+        specialinvoke $r97.<Food: void <init>()>();
+
+        $r98.<Bag: Item next> = $r97;
+
+        l52 = l51 + 2L;
+
+        $r99 = (Bag) r235;
+
+        r236 = $r99.<Bag: Item next>;
+
+        $r101 = (Food) r236;
+
+        $r100 = new Vegetable;
+
+        specialinvoke $r100.<Vegetable: void <init>()>();
+
+        $r101.<Food: Item next> = $r100;
+
+        l53 = l52 + 1L;
+
+        $r102 = (Food) r236;
+
+        r237 = $r102.<Food: Item next>;
+
+        $r104 = (Vegetable) r237;
+
+        $r103 = new Fruit;
+
+        specialinvoke $r103.<Fruit: void <init>()>();
+
+        $r104.<Vegetable: Item next> = $r103;
+
+        l54 = l53 + 1L;
+
+        $r105 = (Vegetable) r237;
+
+        r238 = $r105.<Vegetable: Item next>;
+
+        $r107 = (Fruit) r238;
+
+        $r106 = new Apparel;
+
+        specialinvoke $r106.<Apparel: void <init>()>();
+
+        $r107.<Fruit: Item next> = $r106;
+
+        l55 = l54 + 2L;
+
+        $r108 = (Fruit) r238;
+
+        r239 = $r108.<Fruit: Item next>;
+
+        $r110 = (Apparel) r239;
+
+        $r109 = new Shop;
+
+        specialinvoke $r109.<Shop: void <init>()>();
+
+        $r110.<Apparel: Item next> = $r109;
+
+        l18 = l55 + 6L;
+
+        $r111 = (Apparel) r239;
+
+        r203 = $r111.<Apparel: Item next>;
+
+        goto label7;
+
+     label5:
+        $l13 = l19 % 6L;
+
+        $b14 = $l13 cmp 4L;
+
+        if $b14 != 0 goto label6;
+
+        $r53 = (Shop) r203;
+
+        $r52 = new Fruit;
+
+        specialinvoke $r52.<Fruit: void <init>()>();
+
+        $r53.<Shop: Item next> = $r52;
+
+        l56 = l18 + 1L;
+
+        $r54 = (Shop) r203;
+
+        r240 = $r54.<Shop: Item next>;
+
+        $r56 = (Fruit) r240;
+
+        $r55 = new Bag;
+
+        specialinvoke $r55.<Bag: void <init>()>();
+
+        $r56.<Fruit: Item next> = $r55;
+
+        l57 = l56 + 1L;
+
+        $r57 = (Fruit) r240;
+
+        r241 = $r57.<Fruit: Item next>;
+
+        $r59 = (Bag) r241;
+
+        $r58 = new Hat;
+
+        specialinvoke $r58.<Hat: void <init>()>();
+
+        $r59.<Bag: Item next> = $r58;
+
+        l58 = l57 + 1L;
+
+        $r60 = (Bag) r241;
+
+        r242 = $r60.<Bag: Item next>;
+
+        $r62 = (Hat) r242;
+
+        $r61 = new Pant;
+
+        specialinvoke $r61.<Pant: void <init>()>();
+
+        $r62.<Hat: Item next> = $r61;
+
+        l59 = l58 + 1L;
+
+        $r63 = (Hat) r242;
+
+        r243 = $r63.<Hat: Item next>;
+
+        $r65 = (Pant) r243;
+
+        $r64 = new Apparel;
+
+        specialinvoke $r64.<Apparel: void <init>()>();
+
+        $r65.<Pant: Item next> = $r64;
+
+        l60 = l59 + 2L;
+
+        $r66 = (Pant) r243;
+
+        r244 = $r66.<Pant: Item next>;
+
+        $r68 = (Apparel) r244;
+
+        $r67 = new Accessor;
+
+        specialinvoke $r67.<Accessor: void <init>()>();
+
+        $r68.<Apparel: Item next> = $r67;
+
+        l61 = l60 + 2L;
+
+        $r69 = (Apparel) r244;
+
+        r245 = $r69.<Apparel: Item next>;
+
+        $r71 = (Accessor) r245;
+
+        $r70 = new Shirt;
+
+        specialinvoke $r70.<Shirt: void <init>()>();
+
+        $r71.<Accessor: Item next> = $r70;
+
+        l62 = l61 + 1L;
+
+        $r72 = (Accessor) r245;
+
+        r246 = $r72.<Accessor: Item next>;
+
+        $r74 = (Shirt) r246;
+
+        $r73 = new Vegetable;
+
+        specialinvoke $r73.<Vegetable: void <init>()>();
+
+        $r74.<Shirt: Item next> = $r73;
+
+        l63 = l62 + 1L;
+
+        $r75 = (Shirt) r246;
+
+        r247 = $r75.<Shirt: Item next>;
+
+        $r77 = (Vegetable) r247;
+
+        $r76 = new Food;
+
+        specialinvoke $r76.<Food: void <init>()>();
+
+        $r77.<Vegetable: Item next> = $r76;
+
+        l64 = l63 + 2L;
+
+        $r78 = (Vegetable) r247;
+
+        r248 = $r78.<Vegetable: Item next>;
+
+        $r80 = (Food) r248;
+
+        $r79 = new Hat;
+
+        specialinvoke $r79.<Hat: void <init>()>();
+
+        $r80.<Food: Item next> = $r79;
+
+        l18 = l64 + 1L;
+
+        $r81 = (Food) r248;
+
+        r203 = $r81.<Food: Item next>;
+
+        goto label7;
+
+     label6:
+        $l15 = l19 % 6L;
+
+        $b16 = $l15 cmp 5L;
+
+        if $b16 != 0 goto label7;
+
+        $r23 = (Hat) r203;
+
+        $r22 = new Food;
+
+        specialinvoke $r22.<Food: void <init>()>();
+
+        $r23.<Hat: Item next> = $r22;
+
+        l65 = l18 + 2L;
+
+        $r24 = (Hat) r203;
+
+        r249 = $r24.<Hat: Item next>;
+
+        $r26 = (Food) r249;
+
+        $r25 = new Apparel;
+
+        specialinvoke $r25.<Apparel: void <init>()>();
+
+        $r26.<Food: Item next> = $r25;
+
+        l66 = l65 + 2L;
+
+        $r27 = (Food) r249;
+
+        r250 = $r27.<Food: Item next>;
+
+        $r29 = (Apparel) r250;
+
+        $r28 = new Fruit;
+
+        specialinvoke $r28.<Fruit: void <init>()>();
+
+        $r29.<Apparel: Item next> = $r28;
+
+        l67 = l66 + 1L;
+
+        $r30 = (Apparel) r250;
+
+        r251 = $r30.<Apparel: Item next>;
+
+        $r32 = (Fruit) r251;
+
+        $r31 = new Shop;
+
+        specialinvoke $r31.<Shop: void <init>()>();
+
+        $r32.<Fruit: Item next> = $r31;
+
+        l68 = l67 + 6L;
+
+        $r33 = (Fruit) r251;
+
+        r252 = $r33.<Fruit: Item next>;
+
+        $r35 = (Shop) r252;
+
+        $r34 = new Vegetable;
+
+        specialinvoke $r34.<Vegetable: void <init>()>();
+
+        $r35.<Shop: Item next> = $r34;
+
+        l69 = l68 + 1L;
+
+        $r36 = (Shop) r252;
+
+        r253 = $r36.<Shop: Item next>;
+
+        $r38 = (Vegetable) r253;
+
+        $r37 = new Pant;
+
+        specialinvoke $r37.<Pant: void <init>()>();
+
+        $r38.<Vegetable: Item next> = $r37;
+
+        l70 = l69 + 1L;
+
+        $r39 = (Vegetable) r253;
+
+        r254 = $r39.<Vegetable: Item next>;
+
+        $r41 = (Pant) r254;
+
+        $r40 = new Shirt;
+
+        specialinvoke $r40.<Shirt: void <init>()>();
+
+        $r41.<Pant: Item next> = $r40;
+
+        l71 = l70 + 1L;
+
+        $r42 = (Pant) r254;
+
+        r255 = $r42.<Pant: Item next>;
+
+        $r44 = (Shirt) r255;
+
+        $r43 = new Bag;
+
+        specialinvoke $r43.<Bag: void <init>()>();
+
+        $r44.<Shirt: Item next> = $r43;
+
+        l72 = l71 + 1L;
+
+        $r45 = (Shirt) r255;
+
+        r256 = $r45.<Shirt: Item next>;
+
+        $r47 = (Bag) r256;
+
+        $r46 = new Accessor;
+
+        specialinvoke $r46.<Accessor: void <init>()>();
+
+        $r47.<Bag: Item next> = $r46;
+
+        l73 = l72 + 2L;
+
+        $r48 = (Bag) r256;
+
+        r257 = $r48.<Bag: Item next>;
+
+        $r50 = (Accessor) r257;
+
+        $r49 = new Shop;
+
+        specialinvoke $r49.<Shop: void <init>()>();
+
+        $r50.<Accessor: Item next> = $r49;
+
+        l18 = l73 + 6L;
+
+        $r51 = (Accessor) r257;
+
+        r203 = $r51.<Accessor: Item next>;
+
+     label7:
+        l19 = l19 + 1L;
+
+        goto label1;
+
+     label8:
+        $r9 = (Bag) r203;
+
+        $r8 = new Nil;
+
+        specialinvoke $r8.<Nil: void <init>()>();
+
+        $r9.<Bag: Item next> = $r8;
+
+        r3 = (Shop) $r5;
+
+        $r11 = <java.lang.System: java.io.PrintStream out>;
+
+        $r10 = new java.lang.StringBuilder;
+
+        specialinvoke $r10.<java.lang.StringBuilder: void <init>()>();
+
+        $r12 = virtualinvoke $r10.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Expected: ");
+
+        $r13 = virtualinvoke $r12.<java.lang.StringBuilder: java.lang.StringBuilder append(long)>(l18);
+
+        $r14 = virtualinvoke $r13.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $r11.<java.io.PrintStream: void println(java.lang.String)>($r14);
+
+        l0 = staticinvoke <java.lang.System: long currentTimeMillis()>();
+
+        $r15 = new SumVisitor;
+
+        specialinvoke $r15.<SumVisitor: void <init>()>();
+
+        virtualinvoke $r15.<SumVisitor: void Translate(Shop)>(r3);
+
+        l1 = staticinvoke <java.lang.System: long currentTimeMillis()>();
+
+        l2 = l1 - l0;
+
+        $r17 = <java.lang.System: java.io.PrintStream out>;
+
+        $r16 = new java.lang.StringBuilder;
+
+        specialinvoke $r16.<java.lang.StringBuilder: void <init>()>();
+
+        $r18 = virtualinvoke $r16.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Calculated: ");
+
+        $l4 = $r15.<SumVisitor: long total>;
+
+        $r19 = virtualinvoke $r18.<java.lang.StringBuilder: java.lang.StringBuilder append(long)>($l4);
+
+        $r20 = virtualinvoke $r19.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $r17.<java.io.PrintStream: void println(java.lang.String)>($r20);
+
+        $r21 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $r21.<java.io.PrintStream: void println(long)>(l2);
+
+        return;
+    }
+}

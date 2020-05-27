@@ -1,0 +1,73 @@
+class Vegetable extends java.lang.Object implements Item
+{
+    public long cost;
+    public Item next;
+    public int visitableId;
+
+    public void <init>()
+    {
+        Vegetable r0;
+        Nil $r1;
+
+        r0 := @this: Vegetable;
+
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+
+        r0.<Vegetable: long cost> = 1L;
+
+        $r1 = new Nil;
+
+        specialinvoke $r1.<Nil: void <init>()>();
+
+        r0.<Vegetable: Item next> = $r1;
+
+        return;
+    }
+
+    public void accept(visitor)
+    {
+        Vegetable r0;
+        visitor r1;
+
+        r0 := @this: Vegetable;
+
+        r1 := @parameter0: visitor;
+
+        interfaceinvoke r1.<visitor: void visit(Vegetable)>(r0);
+
+        return;
+    }
+
+    public long getCost()
+    {
+        Vegetable r0;
+        long $l0;
+
+        r0 := @this: Vegetable;
+
+        $l0 = r0.<Vegetable: long cost>;
+
+        return $l0;
+    }
+
+    public Item getNext()
+    {
+        Vegetable r0;
+        Item $r1;
+
+        r0 := @this: Vegetable;
+
+        $r1 = r0.<Vegetable: Item next>;
+
+        return $r1;
+    }
+
+    public int getMyId()
+    {
+        Vegetable r0;
+
+        r0 := @this: Vegetable;
+
+        return 10;
+    }
+}

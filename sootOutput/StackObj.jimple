@@ -1,0 +1,17 @@
+public class StackObj
+{
+    public Item_Obj stateObj;
+    public int task;
+    public Item x;
+
+    void <init>()
+    {
+        StackObj r0;
+
+        r0 := @this: StackObj;
+
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+}

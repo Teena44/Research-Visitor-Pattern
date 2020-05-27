@@ -1,0 +1,11 @@
+public class Apparel_Obj extends java.lang.Object implements Item_Obj
+{
+    public SumVisitor r0;
+    public Apparel r1;
+    public Shirt $r2;
+    public Pant $r3;
+    public Item $r4;
+    public java.io.PrintStream $r5;
+    public long total;
+    public Apparel param0;
+}

@@ -1,0 +1,73 @@
+class Hat extends java.lang.Object implements Item
+{
+    public long cost;
+    public Item next;
+    public int visitableId;
+
+    public void <init>()
+    {
+        Hat r0;
+        Nil $r1;
+
+        r0 := @this: Hat;
+
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+
+        r0.<Hat: long cost> = 1L;
+
+        $r1 = new Nil;
+
+        specialinvoke $r1.<Nil: void <init>()>();
+
+        r0.<Hat: Item next> = $r1;
+
+        return;
+    }
+
+    public void accept(visitor)
+    {
+        Hat r0;
+        visitor r1;
+
+        r0 := @this: Hat;
+
+        r1 := @parameter0: visitor;
+
+        interfaceinvoke r1.<visitor: void visit(Hat)>(r0);
+
+        return;
+    }
+
+    public long getCost()
+    {
+        Hat r0;
+        long $l0;
+
+        r0 := @this: Hat;
+
+        $l0 = r0.<Hat: long cost>;
+
+        return $l0;
+    }
+
+    public Item getNext()
+    {
+        Hat r0;
+        Item $r1;
+
+        r0 := @this: Hat;
+
+        $r1 = r0.<Hat: Item next>;
+
+        return $r1;
+    }
+
+    public int getMyId()
+    {
+        Hat r0;
+
+        r0 := @this: Hat;
+
+        return 8;
+    }
+}

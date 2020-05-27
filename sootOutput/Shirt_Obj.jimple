@@ -1,0 +1,12 @@
+public class Shirt_Obj extends java.lang.Object implements Item_Obj
+{
+    public SumVisitor r0;
+    public Shirt r1;
+    public long $l0;
+    public long $l1;
+    public long $l2;
+    public Item $r2;
+    public java.io.PrintStream $r3;
+    public long total;
+    public Shirt param0;
+}

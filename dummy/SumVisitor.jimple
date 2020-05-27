@@ -1,0 +1,498 @@
+class SumVisitor extends java.lang.Object implements visitor
+{
+    long total;
+
+    void <init>()
+    {
+        SumVisitor r0;
+
+        r0 := @this: SumVisitor;
+
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+
+        r0.<SumVisitor: long total> = 0L;
+
+        return;
+    }
+
+    public void Translate(Shop)
+    {
+        SumVisitor r0;
+        Shop r1, r70;
+        stackObj[] r2;
+        int i0, $i1, $i2, $i3, $i4, i38, i39, $i41, i45, i46, i47, i48, i49;
+        stackObj $r3, $r4, $r5, $r6, $r7, $r10, $r26, $r28, $r32, $r34, $r38, $r40, $r44, $r46, $r48, $r60;
+        Item $r8, $r9, $r11, $r12, $r13, $r14, $r15, $r16, $r17, $r18, $r19, $r20, $r21, $r22, $r23, $r24, $r25, $r30, $r31, $r36, $r37, $r42, $r43, $r50, $r51, $r52, $r53, $r54, $r55, $r56, $r57, $r58, $r59, $r62, $r64;
+        long $l5, $l6, $l7, $l8, $l9, $l10, $l11, $l12, $l13, $l14, $l15, $l16, $l17, $l18, $l19, $l20, $l21, $l22, $l23, $l24, $l25, $l26, $l27, $l28, $l29, $l30, $l31, $l32, $l33, $l34, $l35, $l36, $l37, $l42, $l43, $l44;
+        Bag $r27, r69, r79;
+        Hat $r29, r68, r78;
+        Pant $r33, r67, r77;
+        Shirt $r35, r66, r76;
+        Vegetable $r39, r65, r75;
+        Fruit $r41, r63, r74;
+        Accessor $r45, r73;
+        Apparel $r47, r72;
+        Food $r49, r71;
+        boolean z1;
+
+        r0 := @this: SumVisitor;
+
+        r1 := @parameter0: Shop;
+
+        r2 = newarray (stackObj)[50];
+
+        i38 = 0;
+
+        i39 = 0;
+
+     label01:
+        if i39 >= 50 goto label02;
+
+        $r60 = new stackObj;
+
+        specialinvoke $r60.<stackObj: void <init>()>();
+
+        r2[i39] = $r60;
+
+        i39 = i39 + 1;
+
+        goto label01;
+
+     label02:
+        $r3 = new stackObj;
+
+        specialinvoke $r3.<stackObj: void <init>()>();
+
+        $r4 = r2[0];
+
+        $r4.<stackObj: Item x> = r1;
+
+        $r5 = r2[0];
+
+        $r5.<stackObj: int task> = 0;
+
+        $r6 = r2[0];
+
+        $r6.<stackObj: ItemObj O> = null;
+
+        $r7 = r2[0];
+
+        $r8 = $r7.<stackObj: Item x>;
+
+        $r3.<stackObj: Item x> = $r8;
+
+        z1 = 1;
+
+     label03:
+        $i1 = $r3.<stackObj: int task>;
+
+        $r9 = $r3.<stackObj: Item x>;
+
+        $i2 = interfaceinvoke $r9.<Item: int getmyId()>();
+
+        $i3 = $r3.<stackObj: int task>;
+
+        if $i3 != 0 goto label04;
+
+        $i41 = 2147483647;
+
+        goto label05;
+
+     label04:
+        $i41 = 0;
+
+     label05:
+        $i4 = $i2 & $i41;
+
+        i0 = $i1 | $i4;
+
+        tableswitch(i0)
+        {
+            case 1: goto label06;
+            case 2: goto label07;
+            case 3: goto label08;
+            case 4: goto label09;
+            case 5: goto label10;
+            case 6: goto label11;
+            case 7: goto label12;
+            case 8: goto label13;
+            case 9: goto label14;
+            case 10: goto label15;
+            case 11: goto label16;
+            case 12: goto label17;
+            case 13: goto label18;
+            case 14: goto label19;
+            case 15: goto label20;
+            case 16: goto label21;
+            case 17: goto label22;
+            default: goto label24;
+        };
+
+     label06:
+        $r62 = $r3.<stackObj: Item x>;
+
+        r63 = (Fruit) $r62;
+
+        $l42 = r0.<SumVisitor: long total>;
+
+        $l43 = virtualinvoke r63.<Fruit: long getCost()>();
+
+        $l44 = $l42 + $l43;
+
+        r0.<SumVisitor: long total> = $l44;
+
+        $r64 = r63.<Fruit: Item next>;
+
+        $r3.<stackObj: Item x> = $r64;
+
+        goto label24;
+
+     label07:
+        $r58 = $r3.<stackObj: Item x>;
+
+        r65 = (Vegetable) $r58;
+
+        $l35 = r0.<SumVisitor: long total>;
+
+        $l36 = virtualinvoke r65.<Vegetable: long getCost()>();
+
+        $l37 = $l35 + $l36;
+
+        r0.<SumVisitor: long total> = $l37;
+
+        $r59 = r65.<Vegetable: Item next>;
+
+        $r3.<stackObj: Item x> = $r59;
+
+        goto label24;
+
+     label08:
+        $r56 = $r3.<stackObj: Item x>;
+
+        r66 = (Shirt) $r56;
+
+        $l32 = r0.<SumVisitor: long total>;
+
+        $l33 = virtualinvoke r66.<Shirt: long getCost()>();
+
+        $l34 = $l32 + $l33;
+
+        r0.<SumVisitor: long total> = $l34;
+
+        $r57 = r66.<Shirt: Item next>;
+
+        $r3.<stackObj: Item x> = $r57;
+
+        goto label24;
+
+     label09:
+        $r54 = $r3.<stackObj: Item x>;
+
+        r67 = (Pant) $r54;
+
+        $l29 = r0.<SumVisitor: long total>;
+
+        $l30 = virtualinvoke r67.<Pant: long getCost()>();
+
+        $l31 = $l29 + $l30;
+
+        r0.<SumVisitor: long total> = $l31;
+
+        $r55 = r67.<Pant: Item next>;
+
+        $r3.<stackObj: Item x> = $r55;
+
+        goto label24;
+
+     label10:
+        $r52 = $r3.<stackObj: Item x>;
+
+        r68 = (Hat) $r52;
+
+        $l26 = r0.<SumVisitor: long total>;
+
+        $l27 = virtualinvoke r68.<Hat: long getCost()>();
+
+        $l28 = $l26 + $l27;
+
+        r0.<SumVisitor: long total> = $l28;
+
+        $r53 = r68.<Hat: Item next>;
+
+        $r3.<stackObj: Item x> = $r53;
+
+        goto label24;
+
+     label11:
+        $r50 = $r3.<stackObj: Item x>;
+
+        r69 = (Bag) $r50;
+
+        $l23 = r0.<SumVisitor: long total>;
+
+        $l24 = virtualinvoke r69.<Bag: long getCost()>();
+
+        $l25 = $l23 + $l24;
+
+        r0.<SumVisitor: long total> = $l25;
+
+        $r51 = r69.<Bag: Item next>;
+
+        $r3.<stackObj: Item x> = $r51;
+
+        goto label24;
+
+     label12:
+        $r42 = $r3.<stackObj: Item x>;
+
+        r70 = (Shop) $r42;
+
+        i45 = i38 + 1;
+
+        $r44 = r2[i38];
+
+        $r43 = r70.<Shop: Item next>;
+
+        $r44.<stackObj: Item x> = $r43;
+
+        i46 = i45 + 1;
+
+        $r46 = r2[i45];
+
+        $r45 = r70.<Shop: Accessor f2>;
+
+        $r46.<stackObj: Item x> = $r45;
+
+        i38 = i46 + 1;
+
+        $r48 = r2[i46];
+
+        $r47 = r70.<Shop: Apparel f1>;
+
+        $r48.<stackObj: Item x> = $r47;
+
+        $r49 = r70.<Shop: Food f0>;
+
+        $r3.<stackObj: Item x> = $r49;
+
+        goto label24;
+
+     label13:
+        $r36 = $r3.<stackObj: Item x>;
+
+        r71 = (Food) $r36;
+
+        i47 = i38 + 1;
+
+        $r38 = r2[i38];
+
+        $r37 = r71.<Food: Item next>;
+
+        $r38.<stackObj: Item x> = $r37;
+
+        i38 = i47 + 1;
+
+        $r40 = r2[i47];
+
+        $r39 = r71.<Food: Vegetable f1>;
+
+        $r40.<stackObj: Item x> = $r39;
+
+        $r41 = r71.<Food: Fruit f0>;
+
+        $r3.<stackObj: Item x> = $r41;
+
+        goto label24;
+
+     label14:
+        $r30 = $r3.<stackObj: Item x>;
+
+        r72 = (Apparel) $r30;
+
+        i48 = i38 + 1;
+
+        $r32 = r2[i38];
+
+        $r31 = r72.<Apparel: Item next>;
+
+        $r32.<stackObj: Item x> = $r31;
+
+        i38 = i48 + 1;
+
+        $r34 = r2[i48];
+
+        $r33 = r72.<Apparel: Pant f1>;
+
+        $r34.<stackObj: Item x> = $r33;
+
+        $r35 = r72.<Apparel: Shirt f0>;
+
+        $r3.<stackObj: Item x> = $r35;
+
+        goto label24;
+
+     label15:
+        $r24 = $r3.<stackObj: Item x>;
+
+        r73 = (Accessor) $r24;
+
+        i49 = i38 + 1;
+
+        $r26 = r2[i38];
+
+        $r25 = r73.<Accessor: Item next>;
+
+        $r26.<stackObj: Item x> = $r25;
+
+        i38 = i49 + 1;
+
+        $r28 = r2[i49];
+
+        $r27 = r73.<Accessor: Bag f1>;
+
+        $r28.<stackObj: Item x> = $r27;
+
+        $r29 = r73.<Accessor: Hat f0>;
+
+        $r3.<stackObj: Item x> = $r29;
+
+        goto label24;
+
+     label16:
+        $r22 = $r3.<stackObj: Item x>;
+
+        r74 = (Fruit) $r22;
+
+        $l20 = r0.<SumVisitor: long total>;
+
+        $l21 = virtualinvoke r74.<Fruit: long getCost()>();
+
+        $l22 = $l20 + $l21;
+
+        r0.<SumVisitor: long total> = $l22;
+
+        $r23 = r74.<Fruit: Item next>;
+
+        $r3.<stackObj: Item x> = $r23;
+
+        goto label24;
+
+     label17:
+        $r20 = $r3.<stackObj: Item x>;
+
+        r75 = (Vegetable) $r20;
+
+        $l17 = r0.<SumVisitor: long total>;
+
+        $l18 = virtualinvoke r75.<Vegetable: long getCost()>();
+
+        $l19 = $l17 + $l18;
+
+        r0.<SumVisitor: long total> = $l19;
+
+        $r21 = r75.<Vegetable: Item next>;
+
+        $r3.<stackObj: Item x> = $r21;
+
+        goto label24;
+
+     label18:
+        $r18 = $r3.<stackObj: Item x>;
+
+        r76 = (Shirt) $r18;
+
+        $l14 = r0.<SumVisitor: long total>;
+
+        $l15 = virtualinvoke r76.<Shirt: long getCost()>();
+
+        $l16 = $l14 + $l15;
+
+        r0.<SumVisitor: long total> = $l16;
+
+        $r19 = r76.<Shirt: Item next>;
+
+        $r3.<stackObj: Item x> = $r19;
+
+        goto label24;
+
+     label19:
+        $r16 = $r3.<stackObj: Item x>;
+
+        r77 = (Pant) $r16;
+
+        $l11 = r0.<SumVisitor: long total>;
+
+        $l12 = virtualinvoke r77.<Pant: long getCost()>();
+
+        $l13 = $l11 + $l12;
+
+        r0.<SumVisitor: long total> = $l13;
+
+        $r17 = r77.<Pant: Item next>;
+
+        $r3.<stackObj: Item x> = $r17;
+
+        goto label24;
+
+     label20:
+        $r14 = $r3.<stackObj: Item x>;
+
+        r78 = (Hat) $r14;
+
+        $l8 = r0.<SumVisitor: long total>;
+
+        $l9 = virtualinvoke r78.<Hat: long getCost()>();
+
+        $l10 = $l8 + $l9;
+
+        r0.<SumVisitor: long total> = $l10;
+
+        $r15 = r78.<Hat: Item next>;
+
+        $r3.<stackObj: Item x> = $r15;
+
+        goto label24;
+
+     label21:
+        $r12 = $r3.<stackObj: Item x>;
+
+        r79 = (Bag) $r12;
+
+        $l5 = r0.<SumVisitor: long total>;
+
+        $l6 = virtualinvoke r79.<Bag: long getCost()>();
+
+        $l7 = $l5 + $l6;
+
+        r0.<SumVisitor: long total> = $l7;
+
+        $r13 = r79.<Bag: Item next>;
+
+        $r3.<stackObj: Item x> = $r13;
+
+        goto label24;
+
+     label22:
+        z1 = 1;
+
+        if i38 > 0 goto label23;
+
+        z1 = 0;
+
+        goto label24;
+
+     label23:
+        i38 = i38 + -1;
+
+        $r10 = r2[i38];
+
+        $r11 = $r10.<stackObj: Item x>;
+
+        $r3.<stackObj: Item x> = $r11;
+
+     label24:
+        if z1 != 0 goto label03;
+
+        return;
+    }
+}

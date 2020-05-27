@@ -1,0 +1,25 @@
+interface  visitor extends java.lang.Object
+{
+
+    public abstract void visit(Shop);
+
+    public abstract void visit(Food);
+
+    public abstract void visit(Fruit);
+
+    public abstract void visit(Vegetable);
+
+    public abstract void visit(Apparel);
+
+    public abstract void visit(Shirt);
+
+    public abstract void visit(Pant);
+
+    public abstract void visit(Accessor);
+
+    public abstract void visit(Hat);
+
+    public abstract void visit(Bag);
+
+    public abstract void visit(Nil);
+}

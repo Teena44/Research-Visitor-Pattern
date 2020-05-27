@@ -1,0 +1,11 @@
+public class Accessor_Obj extends java.lang.Object implements Item_Obj
+{
+    public SumVisitor r0;
+    public Accessor r1;
+    public Hat $r2;
+    public Bag $r3;
+    public Item $r4;
+    public java.io.PrintStream $r5;
+    public long total;
+    public Accessor param0;
+}

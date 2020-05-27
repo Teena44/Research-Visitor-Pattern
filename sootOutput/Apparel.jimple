@@ -1,0 +1,74 @@
+class Apparel extends java.lang.Object implements Item
+{
+    public Shirt f0;
+    public Pant f1;
+    public Item next;
+    public int visitableId;
+
+    public void <init>()
+    {
+        Apparel r0;
+        Shirt $r1;
+        Pant $r2;
+        Nil $r3;
+
+        r0 := @this: Apparel;
+
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+
+        $r1 = new Shirt;
+
+        specialinvoke $r1.<Shirt: void <init>()>();
+
+        r0.<Apparel: Shirt f0> = $r1;
+
+        $r2 = new Pant;
+
+        specialinvoke $r2.<Pant: void <init>()>();
+
+        r0.<Apparel: Pant f1> = $r2;
+
+        $r3 = new Nil;
+
+        specialinvoke $r3.<Nil: void <init>()>();
+
+        r0.<Apparel: Item next> = $r3;
+
+        return;
+    }
+
+    public void accept(visitor)
+    {
+        Apparel r0;
+        visitor r1;
+
+        r0 := @this: Apparel;
+
+        r1 := @parameter0: visitor;
+
+        interfaceinvoke r1.<visitor: void visit(Apparel)>(r0);
+
+        return;
+    }
+
+    public Item getNext()
+    {
+        Apparel r0;
+        Item $r1;
+
+        r0 := @this: Apparel;
+
+        $r1 = r0.<Apparel: Item next>;
+
+        return $r1;
+    }
+
+    public int getMyId()
+    {
+        Apparel r0;
+
+        r0 := @this: Apparel;
+
+        return 3;
+    }
+}

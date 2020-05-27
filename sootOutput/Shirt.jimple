@@ -1,0 +1,73 @@
+class Shirt extends java.lang.Object implements Item
+{
+    public long cost;
+    public Item next;
+    public int visitableId;
+
+    public void <init>()
+    {
+        Shirt r0;
+        Nil $r1;
+
+        r0 := @this: Shirt;
+
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+
+        r0.<Shirt: long cost> = 1L;
+
+        $r1 = new Nil;
+
+        specialinvoke $r1.<Nil: void <init>()>();
+
+        r0.<Shirt: Item next> = $r1;
+
+        return;
+    }
+
+    public void accept(visitor)
+    {
+        Shirt r0;
+        visitor r1;
+
+        r0 := @this: Shirt;
+
+        r1 := @parameter0: visitor;
+
+        interfaceinvoke r1.<visitor: void visit(Shirt)>(r0);
+
+        return;
+    }
+
+    public long getCost()
+    {
+        Shirt r0;
+        long $l0;
+
+        r0 := @this: Shirt;
+
+        $l0 = r0.<Shirt: long cost>;
+
+        return $l0;
+    }
+
+    public Item getNext()
+    {
+        Shirt r0;
+        Item $r1;
+
+        r0 := @this: Shirt;
+
+        $r1 = r0.<Shirt: Item next>;
+
+        return $r1;
+    }
+
+    public int getMyId()
+    {
+        Shirt r0;
+
+        r0 := @this: Shirt;
+
+        return 5;
+    }
+}

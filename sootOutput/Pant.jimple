@@ -1,0 +1,73 @@
+class Pant extends java.lang.Object implements Item
+{
+    public long cost;
+    public Item next;
+    public int visitableId;
+
+    public void <init>()
+    {
+        Pant r0;
+        Nil $r1;
+
+        r0 := @this: Pant;
+
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+
+        r0.<Pant: long cost> = 1L;
+
+        $r1 = new Nil;
+
+        specialinvoke $r1.<Nil: void <init>()>();
+
+        r0.<Pant: Item next> = $r1;
+
+        return;
+    }
+
+    public void accept(visitor)
+    {
+        Pant r0;
+        visitor r1;
+
+        r0 := @this: Pant;
+
+        r1 := @parameter0: visitor;
+
+        interfaceinvoke r1.<visitor: void visit(Pant)>(r0);
+
+        return;
+    }
+
+    public long getCost()
+    {
+        Pant r0;
+        long $l0;
+
+        r0 := @this: Pant;
+
+        $l0 = r0.<Pant: long cost>;
+
+        return $l0;
+    }
+
+    public Item getNext()
+    {
+        Pant r0;
+        Item $r1;
+
+        r0 := @this: Pant;
+
+        $r1 = r0.<Pant: Item next>;
+
+        return $r1;
+    }
+
+    public int getMyId()
+    {
+        Pant r0;
+
+        r0 := @this: Pant;
+
+        return 4;
+    }
+}

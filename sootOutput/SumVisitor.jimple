@@ -1,0 +1,734 @@
+class SumVisitor extends java.lang.Object implements visitor
+{
+    long total;
+
+    void <init>()
+    {
+        SumVisitor r0;
+
+        r0 := @this: SumVisitor;
+
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+
+        r0.<SumVisitor: long total> = 0L;
+
+        return;
+    }
+
+    public void visitDummy()
+    {
+        SumVisitor r0;
+        Nil[] r1;
+        Nil $r2;
+        java.io.PrintStream $r3, $r4, $r5;
+        int i0;
+
+        r0 := @this: SumVisitor;
+
+        r1 = newarray (Nil)[100];
+
+        i0 = 0;
+
+     label1:
+        $r2 = new Nil;
+
+        specialinvoke $r2.<Nil: void <init>()>();
+
+        r1[i0] = $r2;
+
+        i0 = i0 + 1;
+
+        if i0 > 10 goto label1;
+
+        tableswitch(i0)
+        {
+            case 0: goto label2;
+            case 1: goto label3;
+            case 2: goto label4;
+            default: goto label5;
+        };
+
+     label2:
+        $r3 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $r3.<java.io.PrintStream: void println(java.lang.String)>("0");
+
+        goto label5;
+
+     label3:
+        $r5 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $r5.<java.io.PrintStream: void println(java.lang.String)>("1");
+
+        goto label5;
+
+     label4:
+        $r4 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $r4.<java.io.PrintStream: void println(java.lang.String)>("2");
+
+     label5:
+        return;
+    }
+
+    public void visit(Shop)
+    {
+        SumVisitor r0;
+        Shop r1;
+        Food $r2;
+        Apparel $r3;
+        Accessor $r4;
+        Item $r5;
+        java.io.PrintStream $r6;
+
+        r0 := @this: SumVisitor;
+
+        r1 := @parameter0: Shop;
+
+        $r2 = r1.<Shop: Food f0>;
+
+        virtualinvoke $r2.<Food: void accept(visitor)>(r0);
+
+        $r3 = r1.<Shop: Apparel f1>;
+
+        virtualinvoke $r3.<Apparel: void accept(visitor)>(r0);
+
+        $r4 = r1.<Shop: Accessor f2>;
+
+        virtualinvoke $r4.<Accessor: void accept(visitor)>(r0);
+
+        $r5 = r1.<Shop: Item next>;
+
+        interfaceinvoke $r5.<Item: void accept(visitor)>(r0);
+
+        $r6 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $r6.<java.io.PrintStream: void println(java.lang.String)>("Shop");
+
+        return;
+    }
+
+    public void visit(Food)
+    {
+        SumVisitor r0;
+        Food r1;
+        Fruit $r2;
+        Vegetable $r3;
+        Item $r4;
+        java.io.PrintStream $r5;
+
+        r0 := @this: SumVisitor;
+
+        r1 := @parameter0: Food;
+
+        $r2 = r1.<Food: Fruit f0>;
+
+        virtualinvoke $r2.<Fruit: void accept(visitor)>(r0);
+
+        $r3 = r1.<Food: Vegetable f1>;
+
+        virtualinvoke $r3.<Vegetable: void accept(visitor)>(r0);
+
+        $r4 = r1.<Food: Item next>;
+
+        interfaceinvoke $r4.<Item: void accept(visitor)>(r0);
+
+        $r5 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $r5.<java.io.PrintStream: void println(java.lang.String)>("Food");
+
+        return;
+    }
+
+    public void visit(Fruit)
+    {
+        SumVisitor r0;
+        Fruit r1;
+        long $l0, $l1, $l2;
+        Item $r2;
+        java.io.PrintStream $r3;
+
+        r0 := @this: SumVisitor;
+
+        r1 := @parameter0: Fruit;
+
+        $l0 = r0.<SumVisitor: long total>;
+
+        $l1 = virtualinvoke r1.<Fruit: long getCost()>();
+
+        $l2 = $l0 + $l1;
+
+        r0.<SumVisitor: long total> = $l2;
+
+        $r2 = r1.<Fruit: Item next>;
+
+        interfaceinvoke $r2.<Item: void accept(visitor)>(r0);
+
+        $r3 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $r3.<java.io.PrintStream: void println(java.lang.String)>("Fruit");
+
+        return;
+    }
+
+    public void visit(Vegetable)
+    {
+        SumVisitor r0;
+        Vegetable r1;
+        long $l0, $l1, $l2;
+        Item $r2;
+        java.io.PrintStream $r3;
+
+        r0 := @this: SumVisitor;
+
+        r1 := @parameter0: Vegetable;
+
+        $l0 = r0.<SumVisitor: long total>;
+
+        $l1 = virtualinvoke r1.<Vegetable: long getCost()>();
+
+        $l2 = $l0 + $l1;
+
+        r0.<SumVisitor: long total> = $l2;
+
+        $r2 = r1.<Vegetable: Item next>;
+
+        interfaceinvoke $r2.<Item: void accept(visitor)>(r0);
+
+        $r3 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $r3.<java.io.PrintStream: void println(java.lang.String)>("Vegetable");
+
+        return;
+    }
+
+    public void visit(Apparel)
+    {
+        SumVisitor r0;
+        Apparel r1;
+        Shirt $r2;
+        Pant $r3;
+        Item $r4;
+        java.io.PrintStream $r5;
+
+        r0 := @this: SumVisitor;
+
+        r1 := @parameter0: Apparel;
+
+        $r2 = r1.<Apparel: Shirt f0>;
+
+        virtualinvoke $r2.<Shirt: void accept(visitor)>(r0);
+
+        $r3 = r1.<Apparel: Pant f1>;
+
+        virtualinvoke $r3.<Pant: void accept(visitor)>(r0);
+
+        $r4 = r1.<Apparel: Item next>;
+
+        interfaceinvoke $r4.<Item: void accept(visitor)>(r0);
+
+        $r5 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $r5.<java.io.PrintStream: void println(java.lang.String)>("Apparel");
+
+        return;
+    }
+
+    public void visit(Shirt)
+    {
+        SumVisitor r0;
+        Shirt r1;
+        long $l0, $l1, $l2;
+        Item $r2;
+        java.io.PrintStream $r3;
+
+        r0 := @this: SumVisitor;
+
+        r1 := @parameter0: Shirt;
+
+        $l0 = r0.<SumVisitor: long total>;
+
+        $l1 = virtualinvoke r1.<Shirt: long getCost()>();
+
+        $l2 = $l0 + $l1;
+
+        r0.<SumVisitor: long total> = $l2;
+
+        $r2 = r1.<Shirt: Item next>;
+
+        interfaceinvoke $r2.<Item: void accept(visitor)>(r0);
+
+        $r3 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $r3.<java.io.PrintStream: void println(java.lang.String)>("Shirt");
+
+        return;
+    }
+
+    public void visit(Pant)
+    {
+        SumVisitor r0;
+        Pant r1;
+        long $l0, $l1, $l2;
+        Item $r2;
+        java.io.PrintStream $r3;
+
+        r0 := @this: SumVisitor;
+
+        r1 := @parameter0: Pant;
+
+        $l0 = r0.<SumVisitor: long total>;
+
+        $l1 = virtualinvoke r1.<Pant: long getCost()>();
+
+        $l2 = $l0 + $l1;
+
+        r0.<SumVisitor: long total> = $l2;
+
+        $r2 = r1.<Pant: Item next>;
+
+        interfaceinvoke $r2.<Item: void accept(visitor)>(r0);
+
+        $r3 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $r3.<java.io.PrintStream: void println(java.lang.String)>("Pant");
+
+        return;
+    }
+
+    public void visit(Accessor)
+    {
+        SumVisitor r0;
+        Accessor r1;
+        Hat $r2;
+        Bag $r3;
+        Item $r4;
+        java.io.PrintStream $r5;
+
+        r0 := @this: SumVisitor;
+
+        r1 := @parameter0: Accessor;
+
+        $r2 = r1.<Accessor: Hat f0>;
+
+        virtualinvoke $r2.<Hat: void accept(visitor)>(r0);
+
+        $r3 = r1.<Accessor: Bag f1>;
+
+        virtualinvoke $r3.<Bag: void accept(visitor)>(r0);
+
+        $r4 = r1.<Accessor: Item next>;
+
+        interfaceinvoke $r4.<Item: void accept(visitor)>(r0);
+
+        $r5 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $r5.<java.io.PrintStream: void println(java.lang.String)>("Accessor");
+
+        return;
+    }
+
+    public void visit(Hat)
+    {
+        SumVisitor r0;
+        Hat r1;
+        long $l0, $l1, $l2;
+        Item $r2;
+        java.io.PrintStream $r3;
+
+        r0 := @this: SumVisitor;
+
+        r1 := @parameter0: Hat;
+
+        $l0 = r0.<SumVisitor: long total>;
+
+        $l1 = virtualinvoke r1.<Hat: long getCost()>();
+
+        $l2 = $l0 + $l1;
+
+        r0.<SumVisitor: long total> = $l2;
+
+        $r2 = r1.<Hat: Item next>;
+
+        interfaceinvoke $r2.<Item: void accept(visitor)>(r0);
+
+        $r3 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $r3.<java.io.PrintStream: void println(java.lang.String)>("Hat");
+
+        return;
+    }
+
+    public void visit(Bag)
+    {
+        SumVisitor r0;
+        Bag r1;
+        long $l0, $l1, $l2;
+        Item $r2;
+        java.io.PrintStream $r3;
+
+        r0 := @this: SumVisitor;
+
+        r1 := @parameter0: Bag;
+
+        $l0 = r0.<SumVisitor: long total>;
+
+        $l1 = virtualinvoke r1.<Bag: long getCost()>();
+
+        $l2 = $l0 + $l1;
+
+        r0.<SumVisitor: long total> = $l2;
+
+        $r2 = r1.<Bag: Item next>;
+
+        interfaceinvoke $r2.<Item: void accept(visitor)>(r0);
+
+        $r3 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $r3.<java.io.PrintStream: void println(java.lang.String)>("Bag");
+
+        return;
+    }
+
+    public void visit(Nil)
+    {
+        SumVisitor r0;
+        Nil r1;
+
+        r0 := @this: SumVisitor;
+
+        r1 := @parameter0: Nil;
+
+        return;
+    }
+
+    public static void main(java.lang.String[])
+    {
+        java.lang.String[] r0;
+        Shop r2, $r4, $r5, $r20, $r24, $r25, $r50, $r51, $r52;
+        long l0, l1, l2, $l4, l6, l7, l8, l9, l10, l11, l12, l13, l14, l15, l16;
+        byte $b3;
+        Nil $r6;
+        Bag $r7, $r21, $r22, $r47;
+        java.lang.StringBuilder $r8, $r10, $r11, $r14, $r16, $r17;
+        java.io.PrintStream $r9, $r15, $r19;
+        java.lang.String $r12, $r18;
+        SumVisitor $r13, tz0;
+        Food $r23, $r27, $r28;
+        Fruit $r26, $r30, $r31;
+        Vegetable $r29, $r33, $r34;
+        Apparel $r32, $r36, $r37;
+        Shirt $r35, $r39, $r40;
+        Pant $r38, $r42, $r43;
+        Accessor $r41, $r45, $r46;
+        Hat $r44, $r48, $r49;
+        Item r54, r55, r56, r57, r58, r59, r60, r61, r62, r63;
+        boolean z0;
+
+        r0 := @parameter0: java.lang.String[];
+
+        $r4 = new Shop;
+
+        specialinvoke $r4.<Shop: void <init>()>();
+
+        $r5 = new Shop;
+
+        specialinvoke $r5.<Shop: void <init>()>();
+
+        r54 = (Shop) $r4;
+
+        l6 = 0L + 6L;
+
+        z0 = 0;
+
+        l7 = 2L;
+
+     label1:
+        $b3 = l7 cmp 1900000L;
+
+        if $b3 > 0 goto label4;
+
+        if z0 != 0 goto label2;
+
+        $r51 = (Shop) r54;
+
+        $r50 = new Shop;
+
+        specialinvoke $r50.<Shop: void <init>()>();
+
+        $r51.<Shop: Item next> = $r50;
+
+        l8 = l6 + 6L;
+
+        $r52 = (Shop) r54;
+
+        r55 = $r52.<Shop: Item next>;
+
+        goto label3;
+
+     label2:
+        $r21 = (Bag) r54;
+
+        $r20 = new Shop;
+
+        specialinvoke $r20.<Shop: void <init>()>();
+
+        $r21.<Bag: Item next> = $r20;
+
+        l8 = l6 + 6L;
+
+        $r22 = (Bag) r54;
+
+        r55 = $r22.<Bag: Item next>;
+
+     label3:
+        $r24 = (Shop) r55;
+
+        $r23 = new Food;
+
+        specialinvoke $r23.<Food: void <init>()>();
+
+        $r24.<Shop: Item next> = $r23;
+
+        l9 = l8 + 2L;
+
+        $r25 = (Shop) r55;
+
+        r56 = $r25.<Shop: Item next>;
+
+        $r27 = (Food) r56;
+
+        $r26 = new Fruit;
+
+        specialinvoke $r26.<Fruit: void <init>()>();
+
+        $r27.<Food: Item next> = $r26;
+
+        l10 = l9 + 1L;
+
+        $r28 = (Food) r56;
+
+        r57 = $r28.<Food: Item next>;
+
+        $r30 = (Fruit) r57;
+
+        $r29 = new Vegetable;
+
+        specialinvoke $r29.<Vegetable: void <init>()>();
+
+        $r30.<Fruit: Item next> = $r29;
+
+        l11 = l10 + 1L;
+
+        $r31 = (Fruit) r57;
+
+        r58 = $r31.<Fruit: Item next>;
+
+        $r33 = (Vegetable) r58;
+
+        $r32 = new Apparel;
+
+        specialinvoke $r32.<Apparel: void <init>()>();
+
+        $r33.<Vegetable: Item next> = $r32;
+
+        l12 = l11 + 2L;
+
+        $r34 = (Vegetable) r58;
+
+        r59 = $r34.<Vegetable: Item next>;
+
+        $r36 = (Apparel) r59;
+
+        $r35 = new Shirt;
+
+        specialinvoke $r35.<Shirt: void <init>()>();
+
+        $r36.<Apparel: Item next> = $r35;
+
+        l13 = l12 + 1L;
+
+        $r37 = (Apparel) r59;
+
+        r60 = $r37.<Apparel: Item next>;
+
+        $r39 = (Shirt) r60;
+
+        $r38 = new Pant;
+
+        specialinvoke $r38.<Pant: void <init>()>();
+
+        $r39.<Shirt: Item next> = $r38;
+
+        l14 = l13 + 1L;
+
+        $r40 = (Shirt) r60;
+
+        r61 = $r40.<Shirt: Item next>;
+
+        $r42 = (Pant) r61;
+
+        $r41 = new Accessor;
+
+        specialinvoke $r41.<Accessor: void <init>()>();
+
+        $r42.<Pant: Item next> = $r41;
+
+        l15 = l14 + 2L;
+
+        $r43 = (Pant) r61;
+
+        r62 = $r43.<Pant: Item next>;
+
+        $r45 = (Accessor) r62;
+
+        $r44 = new Hat;
+
+        specialinvoke $r44.<Hat: void <init>()>();
+
+        $r45.<Accessor: Item next> = $r44;
+
+        l16 = l15 + 1L;
+
+        $r46 = (Accessor) r62;
+
+        r63 = $r46.<Accessor: Item next>;
+
+        $r48 = (Hat) r63;
+
+        $r47 = new Bag;
+
+        specialinvoke $r47.<Bag: void <init>()>();
+
+        $r48.<Hat: Item next> = $r47;
+
+        l6 = l16 + 1L;
+
+        $r49 = (Hat) r63;
+
+        r54 = $r49.<Hat: Item next>;
+
+        z0 = 1;
+
+        l7 = l7 + 1L;
+
+        goto label1;
+
+     label4:
+        $r7 = (Bag) r54;
+
+        $r6 = new Nil;
+
+        specialinvoke $r6.<Nil: void <init>()>();
+
+        $r7.<Bag: Item next> = $r6;
+
+        r2 = (Shop) $r4;
+
+        $r9 = <java.lang.System: java.io.PrintStream out>;
+
+        $r8 = new java.lang.StringBuilder;
+
+        specialinvoke $r8.<java.lang.StringBuilder: void <init>()>();
+
+        $r10 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Expected: ");
+
+        $r11 = virtualinvoke $r10.<java.lang.StringBuilder: java.lang.StringBuilder append(long)>(l6);
+
+        $r12 = virtualinvoke $r11.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $r9.<java.io.PrintStream: void println(java.lang.String)>($r12);
+
+        l0 = staticinvoke <java.lang.System: long currentTimeMillis()>();
+
+        $r13 = new SumVisitor;
+
+        specialinvoke $r13.<SumVisitor: void <init>()>();
+
+        tz0 = new SumVisitor;
+
+        specialinvoke tz0.<SumVisitor: void <init>()>();
+
+        virtualinvoke tz0.<SumVisitor: void translation(Shop)>(r2);
+
+        l1 = staticinvoke <java.lang.System: long currentTimeMillis()>();
+
+        l2 = l1 - l0;
+
+        $r15 = <java.lang.System: java.io.PrintStream out>;
+
+        $r14 = new java.lang.StringBuilder;
+
+        specialinvoke $r14.<java.lang.StringBuilder: void <init>()>();
+
+        $r16 = virtualinvoke $r14.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Calculated: ");
+
+        $l4 = $r13.<SumVisitor: long total>;
+
+        $r17 = virtualinvoke $r16.<java.lang.StringBuilder: java.lang.StringBuilder append(long)>($l4);
+
+        $r18 = virtualinvoke $r17.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $r15.<java.io.PrintStream: void println(java.lang.String)>($r18);
+
+        $r19 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $r19.<java.io.PrintStream: void println(long)>(l2);
+
+        return;
+    }
+
+    public void translation(Shop)
+    {
+        SumVisitor r0;
+        Shop r1;
+        StackObj[] stack;
+        int stackIterator, var3;
+        StackObj allocVariable, var0, s, var1;
+        Item var2;
+
+        r0 := @this: SumVisitor;
+
+        r1 := @parameter0: Shop;
+
+        stack = newarray (StackObj)[100];
+
+        stackIterator = 0;
+
+     label1:
+        if stackIterator >= 100 goto label2;
+
+        allocVariable = new StackObj;
+
+        specialinvoke allocVariable.<StackObj: void <init>()>();
+
+        stack[stackIterator] = allocVariable;
+
+        stackIterator = 1 + stackIterator;
+
+        goto label1;
+
+     label2:
+        var0 = stack[0];
+
+        var0.<StackObj: Item x> = r1;
+
+        var0.<StackObj: int task> = 0;
+
+        s = new StackObj;
+
+        specialinvoke s.<SumVisitor: void <init>()>();
+
+        var1 = stack[0];
+
+        var2 = var1.<StackObj: Item x>;
+
+        s.<StackObj: Item x> = var2;
+
+        var3 = var1.<StackObj: int task>;
+
+        s.<StackObj: int task> = var3;
+
+        return;
+    }
+}
